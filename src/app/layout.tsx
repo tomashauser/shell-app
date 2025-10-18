@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { VersionPrintProvider } from "@/app/components/WithVersionPrint";
 import { Button } from "@/components/ui/button";
 
@@ -26,19 +27,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <VersionPrintProvider>
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <header className="mb-3 border-2 justify-center flex">
-            <Button variant="link" asChild>
-              <Link href="/">Template app</Link>
-            </Button>
-          </header>
-          {children}
-        </body>
-      </html>
-    </VersionPrintProvider>
+    <NuqsAdapter>
+      <VersionPrintProvider>
+        <html lang="en">
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          >
+            <header className="mb-3 border-2 justify-center flex">
+              <Button variant="link" asChild>
+                <Link href="/">Template app</Link>
+              </Button>
+            </header>
+            {children}
+          </body>
+        </html>
+      </VersionPrintProvider>
+    </NuqsAdapter>
   );
 }
