@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
+import {ExampleCounter} from "@/app/components/ExampleCounter";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
               <Link href="/rendering/isr">ISR</Link>
             </Button>
           </ul>
+          <ExampleCounter />
         </CardContent>
       </Card>
     </main>

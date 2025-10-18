@@ -3,6 +3,7 @@ import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 import {Button} from "@/components/ui/button";
 import Link from "next/link";
+import {VersionPrintProvider} from "@/app/components/WithVersionPrint";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -25,7 +26,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <VersionPrintProvider><html lang="en">
         <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
@@ -38,6 +39,6 @@ export default function RootLayout({
         </header>
         {children}
         </body>
-        </html>
+        </html></VersionPrintProvider>
     );
 }
