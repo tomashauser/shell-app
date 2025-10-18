@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { ExampleCounter } from "@/app/components/ExampleCounter";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -6,8 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {ExampleCounter} from "@/app/components/ExampleCounter";
 
 export default function Home() {
   return (
