@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { VersionPrintProvider } from "@/app/components/WithVersionPrint";
-import { Button } from "@/components/ui/button";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,11 +31,6 @@ export default function RootLayout({
           <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
           >
-            <header className="mb-3 border-2 justify-center flex">
-              <Button variant="link" asChild>
-                <Link href="/">Template app</Link>
-              </Button>
-            </header>
             {children}
           </body>
         </html>

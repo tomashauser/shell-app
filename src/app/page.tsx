@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { UrlBasedExampleCounter } from "@/app/nuqs/components/UrlBasedExampleCounter";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -38,12 +37,13 @@ export default function Home() {
         <Card>
           <CardHeader>Other</CardHeader>
           <CardContent>
-            <ul>
-              <li>
-                <nav>
-                  <Link href="/nuqs">Nuqs</Link>
-                </nav>
-              </li>
+            <ul className="flex flex-col gap-1">
+              <Button asChild>
+                <Link href="/nuqs">Nuqs</Link>
+              </Button>
+              <Button asChild>
+                <Link href="/spanish-verbs">Spanish Verbs</Link>
+              </Button>
             </ul>
           </CardContent>
         </Card>

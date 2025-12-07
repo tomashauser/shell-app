@@ -1,7 +1,6 @@
 "use client";
 
 import { parseAsInteger, useQueryState } from "nuqs";
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
