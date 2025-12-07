@@ -19,7 +19,7 @@ export function CompletionScreen({
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-emerald-100/50 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-teal-100/50 via-transparent to-transparent" />
 
-      <Card className="max-w-md w-full relative z-10 backdrop-blur-sm bg-white/95 shadow-xl h-[95dvh] flex flex-col justify-center">
+      <Card className="max-w-md w-full relative z-10 backdrop-blur-sm bg-white/95 shadow-xl h-[90dvh] flex flex-col justify-center">
         <CardHeader className="text-center">
           <div className="text-6xl mb-4">🎉</div>
           <CardTitle className="text-3xl">¡Felicidades!</CardTitle>

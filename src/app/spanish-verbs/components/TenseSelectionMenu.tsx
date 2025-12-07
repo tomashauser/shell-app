@@ -26,7 +26,7 @@ export function TenseSelectionMenu({
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-emerald-100/50 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-teal-100/50 via-transparent to-transparent" />
 
-      <Card className="max-w-2xl w-full relative z-10 backdrop-blur-sm bg-white/95 shadow-xl h-[95dvh] flex flex-col">
+      <Card className="max-w-2xl w-full relative z-10 backdrop-blur-sm bg-white/95 shadow-xl h-[95dvh] self-baseline flex flex-col">
         <CardHeader className="text-center pb-4">
           <div className="flex justify-end mb-2">
             <Button

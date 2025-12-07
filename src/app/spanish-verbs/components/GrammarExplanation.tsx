@@ -21,7 +21,7 @@ export function GrammarExplanation({
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-emerald-100/50 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-teal-100/50 via-transparent to-transparent" />
 
-      <Card className="max-w-3xl w-full relative z-10 backdrop-blur-sm bg-white/95 shadow-xl h-[95dvh] flex flex-col">
+      <Card className="max-w-3xl w-full relative z-10 backdrop-blur-sm bg-white/95 shadow-xl h-[95dvh] self-baseline flex flex-col">
         <CardHeader>
           <div className="flex justify-between items-center mb-4">
             <BackButton onClick={onBack} />
@@ -32,7 +32,7 @@ export function GrammarExplanation({
           </div>
         </CardHeader>
 
-        <CardContent className="flex-1 overflow-auto space-y-6">
+        <CardContent className="flex-1 overflow-auto space-y-6 h-[40vh] overflow-y-scroll">
           {/* When to Use */}
           <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-lg p-6 shadow-sm">
             <h3 className="text-xl font-semibold text-emerald-800 mb-3">

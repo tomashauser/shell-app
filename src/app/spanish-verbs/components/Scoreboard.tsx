@@ -33,7 +33,7 @@ export function Scoreboard({ onClose }: ScoreboardProps) {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-emerald-100/50 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-teal-100/50 via-transparent to-transparent" />
 
-      <Card className="max-w-4xl w-full relative z-10 backdrop-blur-sm bg-white/95 shadow-xl h-[95dvh] flex flex-col">
+      <Card className="max-w-4xl w-full relative z-10 backdrop-blur-sm bg-white/95 shadow-xl h-[95dvh] self-baseline flex flex-col">
         <CardHeader>
           <div className="flex justify-between items-center">
             <BackButton onClick={onClose} />

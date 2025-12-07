@@ -28,11 +28,12 @@ export function FlashCardHeader({
       </div>
       <div className="text-sm md:text-base text-gray-600">
         Round {round} • Card {currentIndex + 1} of {totalCards}
-        {incorrectCount > 0 && (
-          <span className="block md:inline md:ml-3 text-orange-600 mt-1 md:mt-0">
-            ({incorrectCount} to review this round)
-          </span>
-        )}
+        <span
+          className="block md:inline md:ml-3 mt-1 md:mt-0"
+          style={{ color: incorrectCount === 0 ? "transparent" : "unset" }}
+        >
+          ({incorrectCount} to review this round)
+        </span>
       </div>
     </div>
   );
