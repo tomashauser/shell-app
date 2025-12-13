@@ -2,11 +2,17 @@
 
 ## Commits: ALWAYS use gitmojis
 
-Format: `[gitmoji] [Message with capital]`
+Format: `[:code:] [Message with capital]` - Use text codes, NOT emoji symbols
 
-Common: ✨ feature | 🐛 bug | 💄 UI | ♻️ refactor | 📝 docs | 🔧 config
+Common codes:
+- `:sparkles:` feature
+- `:bug:` bug fix
+- `:lipstick:` UI/style
+- `:recycle:` refactor
+- `:memo:` docs
+- `:wrench:` config
 
-Example: `git commit -m "✨ Add dark mode toggle"`
+Example: `git commit -m ":sparkles: Add dark mode toggle"`
 
 ## Key Standards
 
