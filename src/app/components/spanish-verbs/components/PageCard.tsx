@@ -37,7 +37,7 @@ export function PageCard({
               <div className="flex justify-between items-center mb-4">
                 <BackButton onClick={onBack} />
                 {title && (
-                  <CardTitle className="text-3xl text-emerald-800 w-full">
+                  <CardTitle className="text-3xl text-emerald-800 text-center w-full">
                     {title}
                   </CardTitle>
                 )}
