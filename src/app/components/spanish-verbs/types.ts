@@ -1,3 +1,24 @@
+export type Verb = {
+  infinitive: string;
+  english: string;
+  conjugations: string[];
+  examples: string[];
+};
+
+export type VerbSet = {
+  name: string;
+  verbs: Verb[];
+  explanation: {
+    whenToUse: string;
+    importantRules: string[];
+    regularPattern: string;
+  };
+};
+
+export type VerbSets = {
+  [key: string]: VerbSet;
+};
+
 export type ScoreRecord = {
   id: string;
   tense: string;

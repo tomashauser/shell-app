@@ -25,6 +25,12 @@ const shuffleArray = <T,>(array: T[]): T[] => {
   return newArray;
 };
 
+type PreviousCard = {
+  index: number;
+  wasIncorrect: boolean;
+  wasFlipped: boolean;
+} | null;
+
 export default function PracticePage() {
   const router = useRouter();
   const params = useParams();
@@ -38,6 +44,7 @@ export default function PracticePage() {
   const [round, setRound] = useState(1);
   const [totalCards, setTotalCards] = useState(0);
   const [incorrectCount, setIncorrectCount] = useState(0);
+  const [previousCard, setPreviousCard] = useState<PreviousCard>(null);
 
   useEffect(() => {
     if (!tense || !verbSets[tense]) {
@@ -54,6 +61,7 @@ export default function PracticePage() {
     setRound(1);
     setTotalCards(verbs.length);
     setIncorrectCount(0);
+    setPreviousCard(null);
   }, [tense, router]);
 
   const currentCard = currentDeck[currentIndex];
@@ -85,6 +93,13 @@ export default function PracticePage() {
       setIncorrectCount((prev) => prev + 1);
     }
 
+    // Save current state before moving
+    setPreviousCard({
+      index: currentIndex,
+      wasIncorrect,
+      wasFlipped: isFlipped,
+    });
+
     setIsFlipped(false);
 
     setTimeout(() => {
@@ -110,9 +125,28 @@ export default function PracticePage() {
           setIncorrectCards([]);
           setCurrentIndex(0);
           setRound(round + 1);
+          setPreviousCard(null); // Clear history when starting new round
         }
       }
     }, FLIP_ANIMATION_DURATION_MS);
+  };
+
+  const handleBack = () => {
+    if (!previousCard) return;
+
+    // Restore previous state
+    setCurrentIndex(previousCard.index);
+    setIsFlipped(previousCard.wasFlipped);
+
+    // Undo the answer
+    if (previousCard.wasIncorrect) {
+      // Remove the last card from incorrectCards
+      setIncorrectCards((prev) => prev.slice(0, -1));
+      setIncorrectCount((prev) => prev - 1);
+    }
+
+    // Clear previous card state
+    setPreviousCard(null);
   };
 
   if (!tense || !verbSets[tense] || !currentCard) {
@@ -155,6 +189,8 @@ export default function PracticePage() {
           isFlipped={isFlipped}
           onKnew={handleKnew}
           onDidntKnow={handleDidntKnow}
+          onBack={handleBack}
+          canGoBack={previousCard !== null}
         />
       </div>
     </div>
