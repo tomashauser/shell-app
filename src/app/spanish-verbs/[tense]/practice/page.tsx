@@ -1,20 +1,18 @@
 "use client";
 
-import { useState } from "react";
-import { CompletionScreen } from "../spanish-verbs/components/CompletionScreen";
-import { FlashCard } from "../spanish-verbs/components/FlashCard";
-import { FlashCardControls } from "../spanish-verbs/components/FlashCardControls";
-import { FlashCardHeader } from "../spanish-verbs/components/FlashCardHeader";
-import { GrammarExplanation } from "../spanish-verbs/components/GrammarExplanation";
-import { Scoreboard } from "../spanish-verbs/components/Scoreboard";
-import { TenseSelectionMenu } from "../spanish-verbs/components/TenseSelectionMenu";
+import { useParams, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { FlashCard } from "@/app/components/spanish-verbs/components/FlashCard";
+import { FlashCardControls } from "@/app/components/spanish-verbs/components/FlashCardControls";
+import { FlashCardHeader } from "@/app/components/spanish-verbs/components/FlashCardHeader";
 import {
   commandPronouns,
   pronouns,
   type Verb,
   verbSets,
-} from "../spanish-verbs/data";
-import { saveScore } from "../spanish-verbs/storage";
+} from "@/app/components/spanish-verbs/data";
+import { saveScore } from "@/app/components/spanish-verbs/storage";
+import { slugToTense } from "@/app/components/spanish-verbs/utils";
 
 const FLIP_ANIMATION_DURATION_MS = 200;
 
@@ -27,53 +25,42 @@ const shuffleArray = <T,>(array: T[]): T[] => {
   return newArray;
 };
 
-const SpanishVerbFlashcards = () => {
-  const [selectedTense, setSelectedTense] = useState<string | null>(null);
-  const [showExplanation, setShowExplanation] = useState(false);
+export default function PracticePage() {
+  const router = useRouter();
+  const params = useParams();
+  const slug = params.tense as string;
+  const tense = slugToTense(slug);
+
   const [currentDeck, setCurrentDeck] = useState<Verb[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [incorrectCards, setIncorrectCards] = useState<Verb[]>([]);
   const [round, setRound] = useState(1);
-  const [isComplete, setIsComplete] = useState(false);
-  const [showScoreboard, setShowScoreboard] = useState(false);
   const [totalCards, setTotalCards] = useState(0);
   const [incorrectCount, setIncorrectCount] = useState(0);
 
-  const currentCard = currentDeck[currentIndex];
-  const currentPronouns =
-    selectedTense === "commands" ? commandPronouns : pronouns;
+  useEffect(() => {
+    if (!tense || !verbSets[tense]) {
+      router.push("/spanish-verbs");
+      return;
+    }
 
-  const handleSelectTense = (tenseKey: string) => {
-    setSelectedTense(tenseKey);
-    setShowExplanation(true);
-  };
-
-  const handleStartPractice = () => {
-    if (!selectedTense) return;
-
-    const verbs = verbSets[selectedTense].verbs;
+    const verbs = verbSets[tense].verbs;
     const shuffled = shuffleArray(verbs);
     setCurrentDeck(shuffled);
     setCurrentIndex(0);
     setIsFlipped(false);
     setIncorrectCards([]);
     setRound(1);
-    setIsComplete(false);
     setTotalCards(verbs.length);
     setIncorrectCount(0);
-    setShowExplanation(false);
-  };
+  }, [tense, router]);
+
+  const currentCard = currentDeck[currentIndex];
+  const currentPronouns = tense === "commands" ? commandPronouns : pronouns;
 
   const handleBackToMenu = () => {
-    setSelectedTense(null);
-    setShowExplanation(false);
-    setCurrentDeck([]);
-    setCurrentIndex(0);
-    setIsFlipped(false);
-    setIncorrectCards([]);
-    setRound(1);
-    setIsComplete(false);
+    router.push("/spanish-verbs");
   };
 
   const handleFlip = () => {
@@ -98,10 +85,8 @@ const SpanishVerbFlashcards = () => {
       setIncorrectCount((prev) => prev + 1);
     }
 
-    // Flip the card back immediately to start the animation
     setIsFlipped(false);
 
-    // Delay the content change until after the flip animation completes
     setTimeout(() => {
       if (currentIndex < currentDeck.length - 1) {
         setCurrentIndex(currentIndex + 1);
@@ -110,19 +95,16 @@ const SpanishVerbFlashcards = () => {
         }
       } else {
         if (newIncorrectCards.length === 0) {
-          // Save score when completing
-          if (selectedTense) {
-            saveScore({
-              id: `${Date.now()}-${selectedTense}`,
-              tense: selectedTense,
-              rounds: round,
-              totalCards,
-              correctCards: totalCards - incorrectCount,
-              timestamp: Date.now(),
-              completedAt: new Date().toISOString(),
-            });
-          }
-          setIsComplete(true);
+          saveScore({
+            id: `${Date.now()}-${tense}`,
+            tense: tense,
+            rounds: round,
+            totalCards,
+            correctCards: totalCards - incorrectCount,
+            timestamp: Date.now(),
+            completedAt: new Date().toISOString(),
+          });
+          router.push(`/spanish-verbs/${slug}/completion?rounds=${round}`);
         } else {
           setCurrentDeck(shuffleArray(newIncorrectCards));
           setIncorrectCards([]);
@@ -133,46 +115,7 @@ const SpanishVerbFlashcards = () => {
     }, FLIP_ANIMATION_DURATION_MS);
   };
 
-  const handleRestart = () => {
-    if (selectedTense) {
-      const verbs = verbSets[selectedTense].verbs;
-      const shuffled = shuffleArray(verbs);
-      setCurrentDeck(shuffled);
-      setCurrentIndex(0);
-      setIsFlipped(false);
-      setIncorrectCards([]);
-      setRound(1);
-      setIsComplete(false);
-      setTotalCards(verbs.length);
-      setIncorrectCount(0);
-    }
-  };
-
-  if (showScoreboard) {
-    return <Scoreboard onClose={() => setShowScoreboard(false)} />;
-  }
-
-  if (!selectedTense) {
-    return (
-      <TenseSelectionMenu
-        verbSets={verbSets}
-        onSelectTense={handleSelectTense}
-        onViewScoreboard={() => setShowScoreboard(true)}
-      />
-    );
-  }
-
-  if (showExplanation && selectedTense) {
-    return (
-      <GrammarExplanation
-        tenseData={verbSets[selectedTense]}
-        onStart={handleStartPractice}
-        onBack={handleBackToMenu}
-      />
-    );
-  }
-
-  if (!currentCard) {
+  if (!tense || !verbSets[tense] || !currentCard) {
     return (
       <div className="relative flex items-center justify-center min-h-screen p-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50" />
@@ -185,26 +128,15 @@ const SpanishVerbFlashcards = () => {
     );
   }
 
-  if (isComplete) {
-    return (
-      <CompletionScreen
-        round={round}
-        onBackToMenu={handleBackToMenu}
-        onRestart={handleRestart}
-      />
-    );
-  }
-
   return (
     <div className="relative flex flex-col items-center justify-center p-4 overflow-hidden h-[100dvh]">
-      {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-emerald-100/50 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-teal-100/50 via-transparent to-transparent" />
 
       <div className="relative z-10 flex flex-col items-center w-full justify-center self-baseline h-[100dvh]">
         <FlashCardHeader
-          tenseName={verbSets[selectedTense].name}
+          tenseName={verbSets[tense].name}
           round={round}
           currentIndex={currentIndex}
           totalCards={currentDeck.length}
@@ -227,6 +159,4 @@ const SpanishVerbFlashcards = () => {
       </div>
     </div>
   );
-};
-
-export default SpanishVerbFlashcards;
+}
