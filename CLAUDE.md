@@ -24,6 +24,8 @@ Example: `git commit -m ":sparkles: Add dark mode toggle"`
 
 **Pre-commit**: Run `bun run type-check && bun run biome check --write [files]`
 
+**IMPORTANT - Git commits**: ONLY commit files you edited. NEVER use `git add -A` or `git add .` as user may be working on other files. Always use `git add [specific-files]` with only the files you modified.
+
 ## Spanish Verbs App
 
 - Use `PageCard` component for pages (animated backgrounds)
