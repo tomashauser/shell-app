@@ -91,7 +91,7 @@ export function GrammarExplanation({
         <div className="p-6 border-t">
           <Button
             onClick={onStart}
-            className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white shadow-md hover:shadow-lg"
+            className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white shadow-md hover:shadow-lg transition-all"
             size="lg"
           >
             Start Practice

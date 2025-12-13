@@ -66,7 +66,7 @@ export function FlashCard({
         style={{
           transformStyle: "preserve-3d",
           transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
-          minHeight: "450px",
+          minHeight: "470px",
           height: "fit-content",
         }}
         aria-label={isFlipped ? "Hide conjugations" : "Show conjugations"}
