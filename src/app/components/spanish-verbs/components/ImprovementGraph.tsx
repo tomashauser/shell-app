@@ -15,15 +15,14 @@ export function ImprovementGraph({ scores }: ImprovementGraphProps) {
 
   // Take the last 10 scores for the graph
   const recentScores = scores.slice(-10).reverse();
-  const maxRounds = Math.max(...recentScores.map((s) => s.rounds));
 
   return (
     <div className="space-y-4">
       <h3 className="text-lg font-semibold text-gray-800">Recent Progress</h3>
       <div className="space-y-2">
         {recentScores.map((score) => {
-          const percentage = (score.rounds / maxRounds) * 100;
-          const inversePercentage = 100 - percentage + 20; // Lower rounds = better = higher on graph
+          const accuracyPercentage =
+            (score.correctCards / score.totalCards) * 100;
 
           return (
             <div key={score.id} className="space-y-1">
@@ -36,7 +35,7 @@ export function ImprovementGraph({ scores }: ImprovementGraphProps) {
               <div className="relative h-8 bg-gray-100 rounded-lg overflow-hidden">
                 <div
                   className="absolute left-0 top-0 h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg transition-all"
-                  style={{ width: `${inversePercentage}%` }}
+                  style={{ width: `${accuracyPercentage}%` }}
                 />
                 <div className="absolute inset-0 flex items-center justify-end pr-2">
                   <span className="text-xs font-medium text-gray-700">
