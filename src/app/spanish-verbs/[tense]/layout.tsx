@@ -5,9 +5,10 @@ import { slugToTense } from "@/app/components/spanish-verbs/utils";
 export async function generateMetadata({
   params,
 }: {
-  params: { tense: string };
+  params: Promise<{ tense: string }>;
 }): Promise<Metadata> {
-  const tense = slugToTense(params.tense);
+  const { tense: tenseSlug } = await params;
+  const tense = slugToTense(tenseSlug);
   const tenseData = verbSets[tense];
 
   if (!tenseData) {
