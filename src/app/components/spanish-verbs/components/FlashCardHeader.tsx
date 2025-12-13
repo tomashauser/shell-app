@@ -21,7 +21,7 @@ export function FlashCardHeader({
     <div className="mb-4 text-center px-2 w-full max-w-md">
       <div className="flex items-center justify-between mb-2">
         <BackButton onClick={onBackToMenu} />
-        <h1 className="text-xl md:text-2xl font-bold text-gray-800">
+        <h1 className="text-xl md:text-2xl font-bold text-gray-800 text-center w-full">
           {tenseName}
         </h1>
         <div className="w-16"></div>
