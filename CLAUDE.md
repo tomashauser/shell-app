@@ -1,30 +1,12 @@
 # Claude Code Guidelines
 
-## Commits: ALWAYS use gitmojis
-
-Format: `[:code:] [Message with capital]` - Use text codes, NOT emoji symbols
-
-Common codes:
-- `:sparkles:` feature
-- `:bug:` bug fix
-- `:lipstick:` UI/style
-- `:recycle:` refactor
-- `:memo:` docs
-- `:wrench:` config
-
-Example: `git commit -m ":sparkles: Add dark mode toggle"`
-
 ## Key Standards
 
-**DRY**: Modify base components (Button, Card) not individual instances. Extract patterns into reusable components (e.g., PageCard).
+- Create a new commit after every change using the gitmoji format `[:code:] [Message with capital]` - Use text codes, NOT emoji symbols.
+- ONLY commit files you edited as user may be working on other files. Always use `git add [specific-files]` with only the files you modified.
+- Pre-commit: Run `bun run type-check && bun run biome check --write [files]`
 
-**URLs**: kebab-case (`/spanish-verbs/present-subjunctive`), internal data camelCase, convert with `tenseToSlug()`/`slugToTense()`.
-
-**Styling**: Buttons have `cursor-pointer active:scale-95 transition-transform` globally in buttonVariants.
-
-**Pre-commit**: Run `bun run type-check && bun run biome check --write [files]`
-
-**IMPORTANT - Git commits**: ONLY commit files you edited. NEVER use `git add -A` or `git add .` as user may be working on other files. Always use `git add [specific-files]` with only the files you modified.
+**IMPORTANT - Git commits**: 
 
 ## Spanish Verbs App
 
