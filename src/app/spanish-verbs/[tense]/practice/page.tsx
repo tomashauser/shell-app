@@ -11,7 +11,10 @@ import {
   type Verb,
   verbSets,
 } from "@/app/components/spanish-verbs/data";
-import { saveScore } from "@/app/components/spanish-verbs/storage";
+import {
+  getTenseSelectedVerbs,
+  saveScore,
+} from "@/app/components/spanish-verbs/storage";
 import { slugToTense } from "@/app/components/spanish-verbs/utils";
 
 const FLIP_ANIMATION_DURATION_MS = 200;
@@ -52,7 +55,17 @@ export default function PracticePage() {
       return;
     }
 
-    const verbs = verbSets[tense].verbs;
+    // Get selected verbs from localStorage, or use all if none selected
+    const selectedInfinitives = getTenseSelectedVerbs(tense);
+    const allVerbs = verbSets[tense].verbs;
+
+    const verbs =
+      selectedInfinitives && selectedInfinitives.length > 0
+        ? allVerbs.filter((verb) =>
+            selectedInfinitives.includes(verb.infinitive),
+          )
+        : allVerbs;
+
     const shuffled = shuffleArray(verbs);
     setCurrentDeck(shuffled);
     setCurrentIndex(0);

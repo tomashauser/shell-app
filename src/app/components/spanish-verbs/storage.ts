@@ -1,6 +1,7 @@
 import type { ScoreboardData, ScoreRecord, TenseStats } from "./types";
 
 const STORAGE_KEY = "spanish-verbs-scores";
+const SELECTED_VERBS_KEY = "spanish-verbs-selected";
 
 export function saveScore(score: ScoreRecord): void {
   if (typeof window === "undefined") return;
@@ -64,4 +65,36 @@ export function clearScores(): void {
   } catch (error) {
     console.error("Failed to clear scores:", error);
   }
+}
+
+export function saveSelectedVerbs(
+  tenseKey: string,
+  verbInfinitives: string[],
+): void {
+  if (typeof window === "undefined") return;
+
+  try {
+    const existing = getSelectedVerbs();
+    existing[tenseKey] = verbInfinitives;
+    localStorage.setItem(SELECTED_VERBS_KEY, JSON.stringify(existing));
+  } catch (error) {
+    console.error("Failed to save selected verbs:", error);
+  }
+}
+
+export function getSelectedVerbs(): Record<string, string[]> {
+  if (typeof window === "undefined") return {};
+
+  try {
+    const data = localStorage.getItem(SELECTED_VERBS_KEY);
+    return data ? JSON.parse(data) : {};
+  } catch (error) {
+    console.error("Failed to load selected verbs:", error);
+    return {};
+  }
+}
+
+export function getTenseSelectedVerbs(tenseKey: string): string[] | null {
+  const allSelected = getSelectedVerbs();
+  return allSelected[tenseKey] || null;
 }

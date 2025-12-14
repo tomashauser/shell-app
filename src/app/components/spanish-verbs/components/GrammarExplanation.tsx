@@ -1,18 +1,56 @@
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import type { VerbSet } from "../data";
+import { getTenseSelectedVerbs, saveSelectedVerbs } from "../storage";
 import { PageCard } from "./PageCard";
 
 type GrammarExplanationProps = {
   tenseData: VerbSet;
+  tenseKey: string;
   onStart: () => void;
   onBack: () => void;
 };
 
 export function GrammarExplanation({
   tenseData,
+  tenseKey,
   onStart,
   onBack,
 }: GrammarExplanationProps) {
+  const [selectedVerbs, setSelectedVerbs] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    // Load saved selection or select all by default
+    const saved = getTenseSelectedVerbs(tenseKey);
+    if (saved) {
+      setSelectedVerbs(new Set(saved));
+    } else {
+      setSelectedVerbs(new Set(tenseData.verbs.map((v) => v.infinitive)));
+    }
+  }, [tenseKey, tenseData.verbs]);
+
+  const toggleVerb = (infinitive: string) => {
+    const newSelected = new Set(selectedVerbs);
+    if (newSelected.has(infinitive)) {
+      newSelected.delete(infinitive);
+    } else {
+      newSelected.add(infinitive);
+    }
+    setSelectedVerbs(newSelected);
+  };
+
+  const selectAll = () => {
+    setSelectedVerbs(new Set(tenseData.verbs.map((v) => v.infinitive)));
+  };
+
+  const deselectAll = () => {
+    setSelectedVerbs(new Set());
+  };
+
+  const handleStart = () => {
+    saveSelectedVerbs(tenseKey, Array.from(selectedVerbs));
+    onStart();
+  };
   return (
     <PageCard
       title={tenseData.name}
@@ -22,11 +60,13 @@ export function GrammarExplanation({
       footer={
         <div className="p-6 border-t">
           <Button
-            onClick={onStart}
-            className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white shadow-md hover:shadow-lg transition-all"
+            onClick={handleStart}
+            disabled={selectedVerbs.size === 0}
+            className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white shadow-md hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             size="lg"
           >
-            Start Practice
+            Start Practice ({selectedVerbs.size}{" "}
+            {selectedVerbs.size === 1 ? "verb" : "verbs"})
           </Button>
         </div>
       }
@@ -75,14 +115,52 @@ export function GrammarExplanation({
         </p>
       </div>
 
-      {/* Verb count */}
-      <div className="text-center text-gray-600">
-        <p className="text-lg">
-          You'll practice{" "}
-          <span className="font-bold text-emerald-700">
-            {tenseData.verbs.length} irregular verbs
-          </span>
-        </p>
+      {/* Verb Selection */}
+      <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-6 shadow-sm">
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-xl font-semibold text-emerald-800">
+            Select Verbs to Practice
+          </h3>
+          <div className="flex gap-2">
+            <Button
+              onClick={selectAll}
+              variant="outline"
+              size="sm"
+              className="text-xs"
+            >
+              Select All
+            </Button>
+            <Button
+              onClick={deselectAll}
+              variant="outline"
+              size="sm"
+              className="text-xs"
+            >
+              Deselect All
+            </Button>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-h-64 overflow-y-auto">
+          {tenseData.verbs.map((verb) => (
+            <label
+              key={verb.infinitive}
+              className="flex items-center gap-2 cursor-pointer hover:bg-white/50 p-2 rounded transition-colors"
+            >
+              <input
+                type="checkbox"
+                checked={selectedVerbs.has(verb.infinitive)}
+                onChange={() => toggleVerb(verb.infinitive)}
+                className="w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500 cursor-pointer"
+              />
+              <span className="text-sm text-gray-700">
+                {verb.infinitive}
+                <span className="text-gray-500 text-xs ml-1">
+                  ({verb.english})
+                </span>
+              </span>
+            </label>
+          ))}
+        </div>
       </div>
     </PageCard>
   );

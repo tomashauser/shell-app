@@ -27,6 +27,7 @@ export default function TenseExplanationPage() {
   return (
     <GrammarExplanation
       tenseData={verbSets[tense]}
+      tenseKey={tense}
       onStart={handleStart}
       onBack={handleBack}
     />
