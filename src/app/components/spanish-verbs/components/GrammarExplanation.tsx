@@ -1,22 +1,21 @@
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import type { VerbSet } from "../data";
 import { getTenseSelectedVerbs, saveSelectedVerbs } from "../storage";
+import { tenseToSlug } from "../utils";
 import { PageCard } from "./PageCard";
 
 type GrammarExplanationProps = {
   tenseData: VerbSet;
   tenseKey: string;
-  onStart: () => void;
-  onBack: () => void;
 };
 
 export function GrammarExplanation({
   tenseData,
   tenseKey,
-  onStart,
-  onBack,
 }: GrammarExplanationProps) {
+  const router = useRouter();
   const [selectedVerbs, setSelectedVerbs] = useState<Set<string>>(new Set());
 
   useEffect(() => {
@@ -49,12 +48,13 @@ export function GrammarExplanation({
 
   const handleStart = () => {
     saveSelectedVerbs(tenseKey, Array.from(selectedVerbs));
-    onStart();
+    const slug = tenseToSlug(tenseKey);
+    router.push(`/spanish-verbs/${slug}/practice`);
   };
   return (
     <PageCard
       title={tenseData.name}
-      onBack={onBack}
+      backHref="/spanish-verbs"
       cardClassName="max-w-3xl w-full"
       contentClassName="space-y-6 h-[40vh] overflow-y-scroll"
       footer={

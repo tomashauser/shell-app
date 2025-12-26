@@ -18,19 +18,5 @@ export default function CompletionPage() {
     return null;
   }
 
-  const handleBackToMenu = () => {
-    router.push("/spanish-verbs");
-  };
-
-  const handleRestart = () => {
-    router.push(`/spanish-verbs/${slug}/practice`);
-  };
-
-  return (
-    <CompletionScreen
-      round={rounds}
-      onBackToMenu={handleBackToMenu}
-      onRestart={handleRestart}
-    />
-  );
+  return <CompletionScreen round={rounds} slug={slug} />;
 }

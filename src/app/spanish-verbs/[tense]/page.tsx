@@ -16,20 +16,5 @@ export default function TenseExplanationPage() {
     return null;
   }
 
-  const handleStart = () => {
-    router.push(`/spanish-verbs/${slug}/practice`);
-  };
-
-  const handleBack = () => {
-    router.push("/spanish-verbs");
-  };
-
-  return (
-    <GrammarExplanation
-      tenseData={verbSets[tense]}
-      tenseKey={tense}
-      onStart={handleStart}
-      onBack={handleBack}
-    />
-  );
+  return <GrammarExplanation tenseData={verbSets[tense]} tenseKey={tense} />;
 }

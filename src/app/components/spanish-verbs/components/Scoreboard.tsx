@@ -8,11 +8,7 @@ import type { TenseStats } from "../types";
 import { ImprovementGraph } from "./ImprovementGraph";
 import { PageCard } from "./PageCard";
 
-type ScoreboardProps = {
-  onClose: () => void;
-};
-
-export function Scoreboard({ onClose }: ScoreboardProps) {
+export function Scoreboard() {
   const [selectedTense, setSelectedTense] = useState<string>(
     Object.keys(verbSets)[0],
   );
@@ -28,7 +24,7 @@ export function Scoreboard({ onClose }: ScoreboardProps) {
   return (
     <PageCard
       title="Your Progress"
-      onBack={onClose}
+      backHref="/spanish-verbs"
       cardClassName="max-w-4xl w-full"
       contentClassName="space-y-6 flex-1 overflow-auto"
     >

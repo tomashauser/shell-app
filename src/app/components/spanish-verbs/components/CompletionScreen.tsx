@@ -1,18 +1,14 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { CardHeader, CardTitle } from "@/components/ui/card";
 import { PageCard } from "./PageCard";
 
 type CompletionScreenProps = {
   round: number;
-  onBackToMenu: () => void;
-  onRestart: () => void;
+  slug: string;
 };
 
-export function CompletionScreen({
-  round,
-  onBackToMenu,
-  onRestart,
-}: CompletionScreenProps) {
+export function CompletionScreen({ round, slug }: CompletionScreenProps) {
   return (
     <PageCard
       cardClassName="max-w-md w-full h-[90dvh] flex flex-col justify-center"
@@ -28,10 +24,12 @@ export function CompletionScreen({
         You've mastered all the verbs in {round} round{round > 1 ? "s" : ""}!
       </p>
       <div className="flex gap-3 justify-center">
-        <Button onClick={onBackToMenu} variant="secondary">
-          Back to Menu
+        <Button asChild variant="secondary">
+          <Link href="/spanish-verbs">Back to Menu</Link>
         </Button>
-        <Button onClick={onRestart}>Practice Again</Button>
+        <Button asChild>
+          <Link href={`/spanish-verbs/${slug}/practice`}>Practice Again</Link>
+        </Button>
       </div>
     </PageCard>
   );

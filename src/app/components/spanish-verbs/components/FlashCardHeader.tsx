@@ -6,7 +6,6 @@ type FlashCardHeaderProps = {
   currentIndex: number;
   totalCards: number;
   incorrectCount: number;
-  onBackToMenu: () => void;
 };
 
 export function FlashCardHeader({
@@ -15,12 +14,11 @@ export function FlashCardHeader({
   currentIndex,
   totalCards,
   incorrectCount,
-  onBackToMenu,
 }: FlashCardHeaderProps) {
   return (
     <div className="mb-4 text-center px-2 w-full max-w-md">
       <div className="flex items-center justify-between mb-2">
-        <BackButton onClick={onBackToMenu} />
+        <BackButton href="/spanish-verbs" />
         <h1 className="text-xl md:text-2xl font-bold text-gray-800 text-center w-full">
           {tenseName}
         </h1>

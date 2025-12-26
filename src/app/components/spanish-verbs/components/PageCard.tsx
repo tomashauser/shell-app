@@ -6,6 +6,7 @@ type PageCardProps = {
   title?: string;
   children: ReactNode;
   onBack?: () => void;
+  backHref?: string;
   headerContent?: ReactNode;
   footer?: ReactNode;
   cardClassName?: string;
@@ -16,6 +17,7 @@ export function PageCard({
   title,
   children,
   onBack,
+  backHref,
   headerContent,
   footer,
   cardClassName = "max-w-2xl w-full",
@@ -31,11 +33,15 @@ export function PageCard({
       <Card
         className={`${cardClassName} relative z-10 backdrop-blur-sm bg-white/95 shadow-xl h-[95dvh] self-baseline flex flex-col`}
       >
-        {(title || headerContent || onBack) && (
+        {(title || headerContent || onBack || backHref) && (
           <CardHeader>
-            {onBack && !headerContent && (
+            {(onBack || backHref) && !headerContent && (
               <div className="flex justify-between items-center mb-4">
-                <BackButton onClick={onBack} />
+                {backHref ? (
+                  <BackButton href={backHref} />
+                ) : onBack ? (
+                  <BackButton onClick={onBack} />
+                ) : null}
                 {title && (
                   <CardTitle className="text-3xl text-emerald-800 text-center w-full">
                     {title}

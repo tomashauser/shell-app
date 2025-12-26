@@ -80,10 +80,6 @@ export default function PracticePage() {
   const currentCard = currentDeck[currentIndex];
   const currentPronouns = tense === "commands" ? commandPronouns : pronouns;
 
-  const handleBackToMenu = () => {
-    router.push("/spanish-verbs");
-  };
-
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
   };
@@ -188,7 +184,6 @@ export default function PracticePage() {
           currentIndex={currentIndex}
           totalCards={currentDeck.length}
           incorrectCount={incorrectCards.length}
-          onBackToMenu={handleBackToMenu}
         />
 
         <FlashCard
