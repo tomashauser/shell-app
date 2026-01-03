@@ -11,5 +11,5 @@ export function tenseToSlug(tense: string): string {
  * @example slugToTense("present-subjunctive") // "presentSubjunctive"
  */
 export function slugToTense(slug: string): string {
-  return slug.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
+  return slug.replace(/-([a-z])/g, (_, letter) => (letter as string).toUpperCase());
 }

@@ -1,6 +1,7 @@
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Route } from "next";
 
 type BackButtonProps =
   | {
@@ -16,8 +17,7 @@ export function BackButton({ onClick, href }: BackButtonProps) {
   if (href) {
     return (
       <Button asChild variant="ghost" size="sm">
-        {/* biome-ignore lint/suspicious/noExplicitAny: Next.js Link type issue with dynamic routes */}
-        <Link href={href as any}>
+        <Link href={href as Route}>
           <ArrowLeft className="h-4 w-4" />
           Back
         </Link>

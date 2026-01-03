@@ -11,10 +11,7 @@ import {
   type Verb,
   verbSets,
 } from "@/app/components/spanish-verbs/data";
-import {
-  getTenseSelectedVerbs,
-  saveScore,
-} from "@/app/components/spanish-verbs/storage";
+import { getTenseSelectedVerbs, saveScore } from "@/app/components/spanish-verbs/storage";
 import { slugToTense } from "@/app/components/spanish-verbs/utils";
 
 const FLIP_ANIMATION_DURATION_MS = 200;
@@ -61,9 +58,7 @@ export default function PracticePage() {
 
     const verbs =
       selectedInfinitives && selectedInfinitives.length > 0
-        ? allVerbs.filter((verb) =>
-            selectedInfinitives.includes(verb.infinitive),
-          )
+        ? allVerbs.filter((verb) => selectedInfinitives.includes(verb.infinitive))
         : allVerbs;
 
     const shuffled = shuffleArray(verbs);
@@ -94,9 +89,7 @@ export default function PracticePage() {
 
   const moveToNext = (wasIncorrect: boolean) => {
     const newIncorrectCards =
-      wasIncorrect && currentCard
-        ? [...incorrectCards, currentCard]
-        : incorrectCards;
+      wasIncorrect && currentCard ? [...incorrectCards, currentCard] : incorrectCards;
 
     if (wasIncorrect) {
       setIncorrectCount((prev) => prev + 1);

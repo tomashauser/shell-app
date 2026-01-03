@@ -23,7 +23,7 @@ export function getScores(): ScoreboardData {
 
   try {
     const data = localStorage.getItem(STORAGE_KEY);
-    return data ? JSON.parse(data) : {};
+    return data ? (JSON.parse(data) as ScoreboardData) : {};
   } catch (error) {
     console.error("Failed to load scores:", error);
     return {};
@@ -67,10 +67,7 @@ export function clearScores(): void {
   }
 }
 
-export function saveSelectedVerbs(
-  tenseKey: string,
-  verbInfinitives: string[],
-): void {
+export function saveSelectedVerbs(tenseKey: string, verbInfinitives: string[]): void {
   if (typeof window === "undefined") return;
 
   try {
@@ -87,7 +84,7 @@ export function getSelectedVerbs(): Record<string, string[]> {
 
   try {
     const data = localStorage.getItem(SELECTED_VERBS_KEY);
-    return data ? JSON.parse(data) : {};
+    return data ? (JSON.parse(data) as Record<string, string[]>) : {};
   } catch (error) {
     console.error("Failed to load selected verbs:", error);
     return {};
