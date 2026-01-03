@@ -13,6 +13,34 @@ type PageCardProps = {
   contentClassName?: string;
 };
 
+function renderBackButton(backHref?: string, onBack?: () => void) {
+  if (backHref) {
+    return <BackButton href={backHref} />;
+  }
+  if (onBack) {
+    return <BackButton onClick={onBack} />;
+  }
+  return null;
+}
+
+function renderDefaultHeader(title?: string, backHref?: string, onBack?: () => void) {
+  const hasBackButton = backHref || onBack;
+
+  if (!hasBackButton && !title) {
+    return null;
+  }
+
+  return (
+    <div className="flex justify-between items-center mb-4">
+      {renderBackButton(backHref, onBack)}
+      {title && (
+        <CardTitle className="text-3xl text-emerald-800 text-center w-full">{title}</CardTitle>
+      )}
+      <div className="w-20"></div>
+    </div>
+  );
+}
+
 export function PageCard({
   title,
   children,
@@ -23,6 +51,9 @@ export function PageCard({
   cardClassName = "max-w-2xl w-full",
   contentClassName = "",
 }: PageCardProps) {
+  const showHeader = title || headerContent || onBack || backHref;
+  const useDefaultHeader = !headerContent && (onBack || backHref);
+
   return (
     <div className="relative flex items-center justify-center min-h-screen p-4 overflow-hidden">
       {/* Animated gradient background */}
@@ -33,30 +64,14 @@ export function PageCard({
       <Card
         className={`${cardClassName} relative z-10 backdrop-blur-sm bg-white/95 shadow-xl h-[95dvh] self-baseline flex flex-col`}
       >
-        {(title || headerContent || onBack || backHref) && (
+        {showHeader && (
           <CardHeader>
-            {(onBack || backHref) && !headerContent && (
-              <div className="flex justify-between items-center mb-4">
-                {backHref ? (
-                  <BackButton href={backHref} />
-                ) : onBack ? (
-                  <BackButton onClick={onBack} />
-                ) : null}
-                {title && (
-                  <CardTitle className="text-3xl text-emerald-800 text-center w-full">
-                    {title}
-                  </CardTitle>
-                )}
-                <div className="w-20"></div>
-              </div>
-            )}
+            {useDefaultHeader && renderDefaultHeader(title, backHref, onBack)}
             {headerContent}
           </CardHeader>
         )}
 
-        <CardContent className={`flex-1 overflow-auto ${contentClassName}`}>
-          {children}
-        </CardContent>
+        <CardContent className={`flex-1 overflow-auto ${contentClassName}`}>{children}</CardContent>
 
         {footer}
       </Card>
