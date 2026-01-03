@@ -12,18 +12,15 @@ import {
   verbSets,
 } from "@/app/components/spanish-verbs/data";
 import { getTenseSelectedVerbs, saveScore } from "@/app/components/spanish-verbs/storage";
-import { slugToTense } from "@/app/components/spanish-verbs/utils";
+import { shuffleArray, slugToTense, tenseToSlug } from "@/app/components/spanish-verbs/utils";
 
 const FLIP_ANIMATION_DURATION_MS = 200;
 
-const shuffleArray = <T,>(array: T[]): T[] => {
-  const newArray = [...array];
-  for (let i = newArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-  }
-  return newArray;
-};
+export function generateStaticParams() {
+  return Object.keys(verbSets).map((tense) => ({
+    tense: tenseToSlug(tense),
+  }));
+}
 
 type PreviousCard = {
   index: number;

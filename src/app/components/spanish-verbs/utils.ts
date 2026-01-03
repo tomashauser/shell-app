@@ -13,3 +13,16 @@ export function tenseToSlug(tense: string): string {
 export function slugToTense(slug: string): string {
   return slug.replace(/-([a-z])/g, (_, letter) => (letter as string).toUpperCase());
 }
+
+/**
+ * Shuffles an array using the Fisher-Yates algorithm
+ * @example shuffleArray([1, 2, 3, 4, 5])
+ */
+export function shuffleArray<T>(array: T[]): T[] {
+  const newArray = [...array];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+}
