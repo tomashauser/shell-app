@@ -73,39 +73,6 @@ export function GrammarExplanation({ tenseData, tenseKey }: GrammarExplanationPr
         </div>
       }
     >
-      {/* When to Use */}
-      <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-lg p-6 shadow-sm">
-        <h3 className="text-xl font-semibold text-emerald-800 mb-3">When to Use</h3>
-        <p className="text-gray-700 leading-relaxed">{tenseData.explanation.whenToUse}</p>
-      </div>
-
-      {/* Important Rules */}
-      <div className="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-lg p-6 shadow-sm">
-        <h3 className="text-xl font-semibold text-emerald-800 mb-3">Important Rules</h3>
-        <ul className="space-y-2">
-          {tenseData.explanation.importantRules.map((rule, index) => (
-            <li key={index} className="flex items-start">
-              <span className="text-emerald-600 mr-2 mt-1">•</span>
-              <span className="text-gray-700">{rule}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Regular Pattern */}
-      <div className="bg-gradient-to-r from-cyan-50 to-emerald-50 rounded-lg p-6 shadow-sm">
-        <h3 className="text-xl font-semibold text-emerald-800 mb-3">Regular Pattern Example</h3>
-        <p className="text-gray-700 font-mono text-lg">{tenseData.explanation.regularPattern}</p>
-      </div>
-
-      {/* Note about irregulars */}
-      <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-        <p className="text-amber-900 text-sm">
-          <span className="font-semibold">Note:</span> This practice focuses on irregular verbs. The
-          conjugations shown don&#39;t follow the regular pattern above.
-        </p>
-      </div>
-
       {/* Verb Selection */}
       <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-6 shadow-sm">
         <div className="flex items-center justify-between mb-4">
@@ -138,6 +105,31 @@ export function GrammarExplanation({ tenseData, tenseKey }: GrammarExplanationPr
             </label>
           ))}
         </div>
+      </div>
+
+      {/* When to Use */}
+      <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-lg p-6 shadow-sm">
+        <h3 className="text-xl font-semibold text-emerald-800 mb-3">When to Use</h3>
+        <p className="text-gray-700 leading-relaxed">{tenseData.explanation.whenToUse}</p>
+      </div>
+
+      {/* Important Rules */}
+      <div className="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-lg p-6 shadow-sm">
+        <h3 className="text-xl font-semibold text-emerald-800 mb-3">Important Rules</h3>
+        <ul className="space-y-2">
+          {tenseData.explanation.importantRules.map((rule, index) => (
+            <li key={index} className="flex items-start">
+              <span className="text-emerald-600 mr-2 mt-1">•</span>
+              <span className="text-gray-700">{rule}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Regular Pattern */}
+      <div className="bg-gradient-to-r from-cyan-50 to-emerald-50 rounded-lg p-6 shadow-sm">
+        <h3 className="text-xl font-semibold text-emerald-800 mb-3">Regular Pattern Example</h3>
+        <p className="text-gray-700 font-mono text-lg">{tenseData.explanation.regularPattern}</p>
       </div>
     </PageCard>
   );
