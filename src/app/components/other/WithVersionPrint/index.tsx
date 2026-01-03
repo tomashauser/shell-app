@@ -12,7 +12,7 @@ export const VersionPrintProvider = ({ children }: PropsWithChildren) => {
       `background: #26637B;
                             color: white; 
       			            padding: 0 0.5rem;
-      			            border-radius: 0.125rem;`,
+      			            border-radius: 0.125rem;`
     );
   }, [envName, version]);
 

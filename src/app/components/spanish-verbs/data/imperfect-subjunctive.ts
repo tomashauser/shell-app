@@ -11,21 +11,13 @@ export const imperfectSubjunctive: VerbSet = {
       "Or: -se/-ses/-se/-semos/-seis/-sen (more formal)",
       "If preterite is irregular, imperfect subjunctive is irregular",
     ],
-    regularPattern:
-      "hablar → hablara/hablase, hablaras/hablases, hablara/hablase...",
+    regularPattern: "hablar → hablara/hablase, hablaras/hablases, hablara/hablase...",
   },
   verbs: [
     {
       infinitive: "ser",
       english: "to be",
-      conjugations: [
-        "fuera",
-        "fueras",
-        "fuera",
-        "fuéramos",
-        "fuerais",
-        "fueran",
-      ],
+      conjugations: ["fuera", "fueras", "fuera", "fuéramos", "fuerais", "fueran"],
       examples: [
         "Mi madre quería que yo fuera médico.",
         "Te pedí que tú fueras más amable con él.",
@@ -38,14 +30,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "ir",
       english: "to go",
-      conjugations: [
-        "fuera",
-        "fueras",
-        "fuera",
-        "fuéramos",
-        "fuerais",
-        "fueran",
-      ],
+      conjugations: ["fuera", "fueras", "fuera", "fuéramos", "fuerais", "fueran"],
       examples: [
         "Mi padre quería que yo fuera a la universidad.",
         "Te pedí que tú fueras al supermercado conmigo.",
@@ -78,14 +63,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "tener",
       english: "to have",
-      conjugations: [
-        "tuviera",
-        "tuvieras",
-        "tuviera",
-        "tuviéramos",
-        "tuvierais",
-        "tuvieran",
-      ],
+      conjugations: ["tuviera", "tuvieras", "tuviera", "tuviéramos", "tuvierais", "tuvieran"],
       examples: [
         "Ojalá que yo tuviera más tiempo para leer.",
         "Si tú tuvieras dinero, comprarías un coche nuevo.",
@@ -98,14 +76,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "hacer",
       english: "to do/make",
-      conjugations: [
-        "hiciera",
-        "hicieras",
-        "hiciera",
-        "hiciéramos",
-        "hicierais",
-        "hicieran",
-      ],
+      conjugations: ["hiciera", "hicieras", "hiciera", "hiciéramos", "hicierais", "hicieran"],
       examples: [
         "Me pidió que yo hiciera la comida para la cena.",
         "Si tú hicieras ejercicio, te sentirías mejor.",
@@ -118,14 +89,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "poder",
       english: "to be able/can",
-      conjugations: [
-        "pudiera",
-        "pudieras",
-        "pudiera",
-        "pudiéramos",
-        "pudierais",
-        "pudieran",
-      ],
+      conjugations: ["pudiera", "pudieras", "pudiera", "pudiéramos", "pudierais", "pudieran"],
       examples: [
         "Ojalá que yo pudiera ir contigo al concierto.",
         "Si tú pudieras venir, sería fantástico.",
@@ -138,14 +102,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "poner",
       english: "to put",
-      conjugations: [
-        "pusiera",
-        "pusieras",
-        "pusiera",
-        "pusiéramos",
-        "pusierais",
-        "pusieran",
-      ],
+      conjugations: ["pusiera", "pusieras", "pusiera", "pusiéramos", "pusierais", "pusieran"],
       examples: [
         "Me pidió que yo pusiera la mesa para seis personas.",
         "Si tú pusieras más atención, entenderías la lección.",
@@ -158,14 +115,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "saber",
       english: "to know",
-      conjugations: [
-        "supiera",
-        "supieras",
-        "supiera",
-        "supiéramos",
-        "supierais",
-        "supieran",
-      ],
+      conjugations: ["supiera", "supieras", "supiera", "supiéramos", "supierais", "supieran"],
       examples: [
         "Ojalá que yo supiera la respuesta a tu pregunta.",
         "Si tú supieras cocinar, prepararías comidas deliciosas.",
@@ -178,14 +128,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "venir",
       english: "to come",
-      conjugations: [
-        "viniera",
-        "vinieras",
-        "viniera",
-        "viniéramos",
-        "vinierais",
-        "vinieran",
-      ],
+      conjugations: ["viniera", "vinieras", "viniera", "viniéramos", "vinierais", "vinieran"],
       examples: [
         "Me pidió que yo viniera temprano a la oficina.",
         "Si tú vinieras a la fiesta, te divertirías mucho.",
@@ -198,14 +141,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "decir",
       english: "to say/tell",
-      conjugations: [
-        "dijera",
-        "dijeras",
-        "dijera",
-        "dijéramos",
-        "dijerais",
-        "dijeran",
-      ],
+      conjugations: ["dijera", "dijeras", "dijera", "dijéramos", "dijerais", "dijeran"],
       examples: [
         "Me pidió que yo dijera la verdad sobre lo ocurrido.",
         "Si tú dijeras lo que piensas, todos te entenderían mejor.",
@@ -218,14 +154,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "traer",
       english: "to bring",
-      conjugations: [
-        "trajera",
-        "trajeras",
-        "trajera",
-        "trajéramos",
-        "trajerais",
-        "trajeran",
-      ],
+      conjugations: ["trajera", "trajeras", "trajera", "trajéramos", "trajerais", "trajeran"],
       examples: [
         "Me pidió que yo trajera vino para la cena.",
         "Si tú trajeras tu cámara, podríamos tomar fotos.",
@@ -238,14 +167,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "dar",
       english: "to give",
-      conjugations: [
-        "diera",
-        "dieras",
-        "diera",
-        "diéramos",
-        "dierais",
-        "dieran",
-      ],
+      conjugations: ["diera", "dieras", "diera", "diéramos", "dierais", "dieran"],
       examples: [
         "Esperaba que yo diera una buena presentación.",
         "Si tú dieras más tiempo al proyecto, sería perfecto.",
@@ -258,14 +180,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "haber",
       english: "to have (auxiliary)",
-      conjugations: [
-        "hubiera",
-        "hubieras",
-        "hubiera",
-        "hubiéramos",
-        "hubierais",
-        "hubieran",
-      ],
+      conjugations: ["hubiera", "hubieras", "hubiera", "hubiéramos", "hubierais", "hubieran"],
       examples: [
         "Si yo hubiera sabido, no habría venido.",
         "Ojalá que tú hubieras estudiado más para el examen.",
@@ -278,14 +193,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "querer",
       english: "to want",
-      conjugations: [
-        "quisiera",
-        "quisieras",
-        "quisiera",
-        "quisiéramos",
-        "quisierais",
-        "quisieran",
-      ],
+      conjugations: ["quisiera", "quisieras", "quisiera", "quisiéramos", "quisierais", "quisieran"],
       examples: [
         "Quisiera que yo pudiera ayudarte más.",
         "Si tú quisieras, podríamos ir al teatro esta noche.",
@@ -318,14 +226,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "argüir",
       english: "to argue/contend",
-      conjugations: [
-        "arguyera",
-        "arguyeras",
-        "arguyera",
-        "arguyéramos",
-        "arguyerais",
-        "arguyeran",
-      ],
+      conjugations: ["arguyera", "arguyeras", "arguyera", "arguyéramos", "arguyerais", "arguyeran"],
       examples: [
         "Esperaba que yo arguyera con más evidencias.",
         "Si tú arguyeras mejor, te creerían.",
@@ -378,14 +279,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "creer",
       english: "to believe",
-      conjugations: [
-        "creyera",
-        "creyeras",
-        "creyera",
-        "creyéramos",
-        "creyerais",
-        "creyeran",
-      ],
+      conjugations: ["creyera", "creyeras", "creyera", "creyéramos", "creyerais", "creyeran"],
       examples: [
         "No pensaba que yo creyera esa historia.",
         "Si tú creyeras en ti mismo, lograrías más.",
@@ -398,14 +292,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "elegir",
       english: "to choose/elect",
-      conjugations: [
-        "eligiera",
-        "eligieras",
-        "eligiera",
-        "eligiéramos",
-        "eligierais",
-        "eligieran",
-      ],
+      conjugations: ["eligiera", "eligieras", "eligiera", "eligiéramos", "eligierais", "eligieran"],
       examples: [
         "Me pidió que yo eligiera el mejor candidato.",
         "Si tú eligieras con cuidado, no te arrepentirías.",
@@ -438,14 +325,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "erguir",
       english: "to erect/raise",
-      conjugations: [
-        "irguiera",
-        "irguieras",
-        "irguiera",
-        "irguiéramos",
-        "irguierais",
-        "irguieran",
-      ],
+      conjugations: ["irguiera", "irguieras", "irguiera", "irguiéramos", "irguierais", "irguieran"],
       examples: [
         "Me pidió que yo irguiera la cabeza con orgullo.",
         "Si tú irguieras la bandera más alto, todos la verían.",
@@ -458,14 +338,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "gruñir",
       english: "to growl/grumble",
-      conjugations: [
-        "gruñera",
-        "gruñeras",
-        "gruñera",
-        "gruñéramos",
-        "gruñerais",
-        "gruñeran",
-      ],
+      conjugations: ["gruñera", "gruñeras", "gruñera", "gruñéramos", "gruñerais", "gruñeran"],
       examples: [
         "No quería que yo gruñera cuando me despertaran.",
         "Si tú gruñeras menos, serías más agradable.",
@@ -478,14 +351,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "morir",
       english: "to die",
-      conjugations: [
-        "muriera",
-        "murieras",
-        "muriera",
-        "muriéramos",
-        "murierais",
-        "murieran",
-      ],
+      conjugations: ["muriera", "murieras", "muriera", "muriéramos", "murierais", "murieran"],
       examples: [
         "Temía que yo muriera de miedo en la montaña rusa.",
         "Si tú murieras de risa, sería por esa película.",
@@ -518,14 +384,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "raer",
       english: "to scrape/scratch off",
-      conjugations: [
-        "rayera",
-        "rayeras",
-        "rayera",
-        "rayéramos",
-        "rayerais",
-        "rayeran",
-      ],
+      conjugations: ["rayera", "rayeras", "rayera", "rayéramos", "rayerais", "rayeran"],
       examples: [
         "Me pidió que yo rayera la pintura vieja.",
         "Si tú rayeras toda la superficie, quedaría lisa.",
@@ -538,14 +397,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "reñir",
       english: "to quarrel/scold",
-      conjugations: [
-        "riñera",
-        "riñeras",
-        "riñera",
-        "riñéramos",
-        "riñerais",
-        "riñeran",
-      ],
+      conjugations: ["riñera", "riñeras", "riñera", "riñéramos", "riñerais", "riñeran"],
       examples: [
         "No quería que yo riñera con mis hermanos.",
         "Si tú riñeras menos, serías más feliz.",
@@ -558,14 +410,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "seguir",
       english: "to follow/continue",
-      conjugations: [
-        "siguiera",
-        "siguieras",
-        "siguiera",
-        "siguiéramos",
-        "siguierais",
-        "siguieran",
-      ],
+      conjugations: ["siguiera", "siguieras", "siguiera", "siguiéramos", "siguierais", "siguieran"],
       examples: [
         "Me pidió que yo siguiera estudiando medicina.",
         "Si tú siguieras mis consejos, te iría mejor.",
@@ -578,14 +423,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "sentir",
       english: "to feel/regret",
-      conjugations: [
-        "sintiera",
-        "sintieras",
-        "sintiera",
-        "sintiéramos",
-        "sintierais",
-        "sintieran",
-      ],
+      conjugations: ["sintiera", "sintieras", "sintiera", "sintiéramos", "sintierais", "sintieran"],
       examples: [
         "No quería que yo sintiera dolor después de la operación.",
         "Si tú sintieras lo mismo, me entenderías.",
@@ -598,14 +436,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "sonreír",
       english: "to smile",
-      conjugations: [
-        "sonriera",
-        "sonrieras",
-        "sonriera",
-        "sonriéramos",
-        "sonrierais",
-        "sonrieran",
-      ],
+      conjugations: ["sonriera", "sonrieras", "sonriera", "sonriéramos", "sonrierais", "sonrieran"],
       examples: [
         "Quería que yo sonriera en la foto familiar.",
         "Si tú sonrieras más, te verías más feliz.",
@@ -618,14 +449,7 @@ export const imperfectSubjunctive: VerbSet = {
     {
       infinitive: "tañer",
       english: "to ring/toll",
-      conjugations: [
-        "tañera",
-        "tañeras",
-        "tañera",
-        "tañéramos",
-        "tañerais",
-        "tañeran",
-      ],
+      conjugations: ["tañera", "tañeras", "tañera", "tañéramos", "tañerais", "tañeran"],
       examples: [
         "Me pidió que yo tañera las campanas al mediodía.",
         "Si tú tañeras el instrumento correctamente, sonaría mejor.",

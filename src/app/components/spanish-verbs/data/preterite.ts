@@ -11,8 +11,7 @@ export const preterite: VerbSet = {
       "Many common verbs have irregular stems",
       "Ser and ir share the same preterite forms",
     ],
-    regularPattern:
-      "hablar → hablé, hablaste, habló, hablamos, hablasteis, hablaron",
+    regularPattern: "hablar → hablé, hablaste, habló, hablamos, hablasteis, hablaron",
   },
   verbs: [
     {
@@ -44,14 +43,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "hacer",
       english: "to do/make",
-      conjugations: [
-        "hice",
-        "hiciste",
-        "hizo",
-        "hicimos",
-        "hicisteis",
-        "hicieron",
-      ],
+      conjugations: ["hice", "hiciste", "hizo", "hicimos", "hicisteis", "hicieron"],
       examples: [
         "Yo hice mi tarea anoche antes de dormir.",
         "Tú hiciste un pastel delicioso para la fiesta.",
@@ -64,14 +56,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "tener",
       english: "to have",
-      conjugations: [
-        "tuve",
-        "tuviste",
-        "tuvo",
-        "tuvimos",
-        "tuvisteis",
-        "tuvieron",
-      ],
+      conjugations: ["tuve", "tuviste", "tuvo", "tuvimos", "tuvisteis", "tuvieron"],
       examples: [
         "Yo tuve una reunión importante ayer.",
         "Tú tuviste suerte en el examen final.",
@@ -84,14 +69,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "estar",
       english: "to be",
-      conjugations: [
-        "estuve",
-        "estuviste",
-        "estuvo",
-        "estuvimos",
-        "estuvisteis",
-        "estuvieron",
-      ],
+      conjugations: ["estuve", "estuviste", "estuvo", "estuvimos", "estuvisteis", "estuvieron"],
       examples: [
         "Yo estuve en París durante tres semanas.",
         "Tú estuviste enfermo la semana pasada.",
@@ -104,14 +82,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "poder",
       english: "to be able/can",
-      conjugations: [
-        "pude",
-        "pudiste",
-        "pudo",
-        "pudimos",
-        "pudisteis",
-        "pudieron",
-      ],
+      conjugations: ["pude", "pudiste", "pudo", "pudimos", "pudisteis", "pudieron"],
       examples: [
         "Yo pude terminar el trabajo a tiempo.",
         "Tú pudiste resolver el problema difícil.",
@@ -124,14 +95,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "poner",
       english: "to put",
-      conjugations: [
-        "puse",
-        "pusiste",
-        "puso",
-        "pusimos",
-        "pusisteis",
-        "pusieron",
-      ],
+      conjugations: ["puse", "pusiste", "puso", "pusimos", "pusisteis", "pusieron"],
       examples: [
         "Yo puse las llaves en la mesa de la entrada.",
         "Tú pusiste mucho esfuerzo en el proyecto final.",
@@ -144,14 +108,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "saber",
       english: "to know",
-      conjugations: [
-        "supe",
-        "supiste",
-        "supo",
-        "supimos",
-        "supisteis",
-        "supieron",
-      ],
+      conjugations: ["supe", "supiste", "supo", "supimos", "supisteis", "supieron"],
       examples: [
         "Yo supe la noticia ayer por la tarde.",
         "Tú supiste la verdad antes que nadie.",
@@ -164,14 +121,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "venir",
       english: "to come",
-      conjugations: [
-        "vine",
-        "viniste",
-        "vino",
-        "vinimos",
-        "vinisteis",
-        "vinieron",
-      ],
+      conjugations: ["vine", "viniste", "vino", "vinimos", "vinisteis", "vinieron"],
       examples: [
         "Yo vine a tu casa temprano esta mañana.",
         "Tú viniste caminando desde la estación.",
@@ -184,14 +134,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "decir",
       english: "to say/tell",
-      conjugations: [
-        "dije",
-        "dijiste",
-        "dijo",
-        "dijimos",
-        "dijisteis",
-        "dijeron",
-      ],
+      conjugations: ["dije", "dijiste", "dijo", "dijimos", "dijisteis", "dijeron"],
       examples: [
         "Yo dije la verdad sobre lo que pasó.",
         "Tú dijiste que vendrías a las ocho.",
@@ -237,14 +180,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "argüir",
       english: "to argue/contend",
-      conjugations: [
-        "argüí",
-        "argüiste",
-        "arguyó",
-        "argüimos",
-        "argüisteis",
-        "arguyeron",
-      ],
+      conjugations: ["argüí", "argüiste", "arguyó", "argüimos", "argüisteis", "arguyeron"],
       examples: [
         "Yo argüí que la decisión era incorrecta.",
         "Tú argüiste a favor de los derechos humanos.",
@@ -277,14 +213,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "buscar",
       english: "to look for/search",
-      conjugations: [
-        "busqué",
-        "buscaste",
-        "buscó",
-        "buscamos",
-        "buscasteis",
-        "buscaron",
-      ],
+      conjugations: ["busqué", "buscaste", "buscó", "buscamos", "buscasteis", "buscaron"],
       examples: [
         "Yo busqué las llaves por toda la casa.",
         "Tú buscaste un nuevo apartamento durante semanas.",
@@ -297,14 +226,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "coger",
       english: "to take/catch",
-      conjugations: [
-        "cogí",
-        "cogiste",
-        "cogió",
-        "cogimos",
-        "cogisteis",
-        "cogieron",
-      ],
+      conjugations: ["cogí", "cogiste", "cogió", "cogimos", "cogisteis", "cogieron"],
       examples: [
         "Yo cogí el autobús a las ocho de la mañana.",
         "Tú cogiste un resfriado la semana pasada.",
@@ -317,14 +239,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "corroer",
       english: "to corrode",
-      conjugations: [
-        "corroí",
-        "corroíste",
-        "corroyó",
-        "corroímos",
-        "corroísteis",
-        "corroyeron",
-      ],
+      conjugations: ["corroí", "corroíste", "corroyó", "corroímos", "corroísteis", "corroyeron"],
       examples: [
         "Yo corroí el metal con ácido en el laboratorio.",
         "Tú corroíste la superficie sin querer.",
@@ -337,14 +252,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "creer",
       english: "to believe",
-      conjugations: [
-        "creí",
-        "creíste",
-        "creyó",
-        "creímos",
-        "creísteis",
-        "creyeron",
-      ],
+      conjugations: ["creí", "creíste", "creyó", "creímos", "creísteis", "creyeron"],
       examples: [
         "Yo creí todo lo que me dijiste.",
         "Tú creíste en sus promesas.",
@@ -357,14 +265,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "elegir",
       english: "to choose/elect",
-      conjugations: [
-        "elegí",
-        "elegiste",
-        "eligió",
-        "elegimos",
-        "elegisteis",
-        "eligieron",
-      ],
+      conjugations: ["elegí", "elegiste", "eligió", "elegimos", "elegisteis", "eligieron"],
       examples: [
         "Yo elegí estudiar medicina en la universidad.",
         "Tú elegiste el mejor restaurante de la ciudad.",
@@ -437,14 +338,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "erguir",
       english: "to erect/raise",
-      conjugations: [
-        "erguí",
-        "erguiste",
-        "irguió",
-        "erguimos",
-        "erguisteis",
-        "irguieron",
-      ],
+      conjugations: ["erguí", "erguiste", "irguió", "erguimos", "erguisteis", "irguieron"],
       examples: [
         "Yo erguí la cabeza con orgullo.",
         "Tú erguiste el monumento en la plaza.",
@@ -457,14 +351,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "gruñir",
       english: "to growl/grumble",
-      conjugations: [
-        "gruñí",
-        "gruñiste",
-        "gruñó",
-        "gruñimos",
-        "gruñisteis",
-        "gruñeron",
-      ],
+      conjugations: ["gruñí", "gruñiste", "gruñó", "gruñimos", "gruñisteis", "gruñeron"],
       examples: [
         "Yo gruñí de frustración cuando perdí el juego.",
         "Tú gruñiste cuando te despertaron temprano.",
@@ -477,14 +364,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "jugar",
       english: "to play",
-      conjugations: [
-        "jugué",
-        "jugaste",
-        "jugó",
-        "jugamos",
-        "jugasteis",
-        "jugaron",
-      ],
+      conjugations: ["jugué", "jugaste", "jugó", "jugamos", "jugasteis", "jugaron"],
       examples: [
         "Yo jugué al fútbol todo el fin de semana.",
         "Tú jugaste muy bien en el partido de ayer.",
@@ -497,14 +377,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "morir",
       english: "to die",
-      conjugations: [
-        "morí",
-        "moriste",
-        "murió",
-        "morimos",
-        "moristeis",
-        "murieron",
-      ],
+      conjugations: ["morí", "moriste", "murió", "morimos", "moristeis", "murieron"],
       examples: [
         "Yo casi morí de miedo en la montaña rusa.",
         "Tú moriste de risa con esa película.",
@@ -517,14 +390,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "pensar",
       english: "to think",
-      conjugations: [
-        "pensé",
-        "pensaste",
-        "pensó",
-        "pensamos",
-        "pensasteis",
-        "pensaron",
-      ],
+      conjugations: ["pensé", "pensaste", "pensó", "pensamos", "pensasteis", "pensaron"],
       examples: [
         "Yo pensé mucho antes de tomar la decisión.",
         "Tú pensaste que llegarías tarde.",
@@ -570,14 +436,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "reñir",
       english: "to quarrel/scold",
-      conjugations: [
-        "reñí",
-        "reñiste",
-        "riñó",
-        "reñimos",
-        "reñisteis",
-        "riñeron",
-      ],
+      conjugations: ["reñí", "reñiste", "riñó", "reñimos", "reñisteis", "riñeron"],
       examples: [
         "Yo reñí con mi hermano por una tontería.",
         "Tú reñiste a los niños por hacer ruido.",
@@ -590,14 +449,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "seguir",
       english: "to follow/continue",
-      conjugations: [
-        "seguí",
-        "seguiste",
-        "siguió",
-        "seguimos",
-        "seguisteis",
-        "siguieron",
-      ],
+      conjugations: ["seguí", "seguiste", "siguió", "seguimos", "seguisteis", "siguieron"],
       examples: [
         "Yo seguí estudiando hasta medianoche.",
         "Tú seguiste mis consejos al pie de la letra.",
@@ -610,14 +462,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "sentir",
       english: "to feel/regret",
-      conjugations: [
-        "sentí",
-        "sentiste",
-        "sintió",
-        "sentimos",
-        "sentisteis",
-        "sintieron",
-      ],
+      conjugations: ["sentí", "sentiste", "sintió", "sentimos", "sentisteis", "sintieron"],
       examples: [
         "Yo sentí mucha alegría al verte.",
         "Tú sentiste dolor en la pierna después de correr.",
@@ -630,14 +475,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "sonreír",
       english: "to smile",
-      conjugations: [
-        "sonreí",
-        "sonreíste",
-        "sonrió",
-        "sonreímos",
-        "sonreísteis",
-        "sonrieron",
-      ],
+      conjugations: ["sonreí", "sonreíste", "sonrió", "sonreímos", "sonreísteis", "sonrieron"],
       examples: [
         "Yo sonreí al escuchar la buena noticia.",
         "Tú sonreíste cuando te vieron llegar.",
@@ -650,14 +488,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "tañer",
       english: "to ring/toll",
-      conjugations: [
-        "tañí",
-        "tañiste",
-        "tañó",
-        "tañimos",
-        "tañisteis",
-        "tañeron",
-      ],
+      conjugations: ["tañí", "tañiste", "tañó", "tañimos", "tañisteis", "tañeron"],
       examples: [
         "Yo tañí las campanas en la celebración.",
         "Tú tañiste el instrumento con maestría.",
@@ -670,14 +501,7 @@ export const preterite: VerbSet = {
     {
       infinitive: "volver",
       english: "to return/come back",
-      conjugations: [
-        "volví",
-        "volviste",
-        "volvió",
-        "volvimos",
-        "volvisteis",
-        "volvieron",
-      ],
+      conjugations: ["volví", "volviste", "volvió", "volvimos", "volvisteis", "volvieron"],
       examples: [
         "Yo volví a casa tarde anoche.",
         "Tú volviste del viaje con muchas fotos.",

@@ -23,10 +23,6 @@ export async function generateMetadata({
   };
 }
 
-export default function TenseLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function TenseLayout({ children }: { children: React.ReactNode }) {
   return children;
 }

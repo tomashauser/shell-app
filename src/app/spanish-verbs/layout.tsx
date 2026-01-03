@@ -5,10 +5,6 @@ export const metadata: Metadata = {
   description: "Practice Spanish verb conjugations",
 };
 
-export default function SpanishVerbsLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function SpanishVerbsLayout({ children }: { children: React.ReactNode }) {
   return children;
 }

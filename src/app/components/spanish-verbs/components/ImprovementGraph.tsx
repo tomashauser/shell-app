@@ -21,8 +21,7 @@ export function ImprovementGraph({ scores }: ImprovementGraphProps) {
       <h3 className="text-lg font-semibold text-gray-800">Recent Progress</h3>
       <div className="space-y-2">
         {recentScores.map((score) => {
-          const accuracyPercentage =
-            (score.correctCards / score.totalCards) * 100;
+          const accuracyPercentage = (score.correctCards / score.totalCards) * 100;
 
           return (
             <div key={score.id} className="space-y-1">

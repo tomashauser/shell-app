@@ -5,10 +5,6 @@ export const metadata: Metadata = {
   description: "View your Spanish verb practice progress",
 };
 
-export default function ScoreboardLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function ScoreboardLayout({ children }: { children: React.ReactNode }) {
   return children;
 }

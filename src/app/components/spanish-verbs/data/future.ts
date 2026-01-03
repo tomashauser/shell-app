@@ -11,8 +11,7 @@ export const future: VerbSet = {
       "Some verbs have irregular stems but regular endings",
       "Common irregular stems: querr-, vendr-, tendr-, pondr-, etc.",
     ],
-    regularPattern:
-      "hablar → hablaré, hablarás, hablará, hablaremos, hablaréis, hablarán",
+    regularPattern: "hablar → hablaré, hablarás, hablará, hablaremos, hablaréis, hablarán",
   },
   verbs: [
     {
@@ -44,14 +43,7 @@ export const future: VerbSet = {
     {
       infinitive: "poder",
       english: "to be able/can",
-      conjugations: [
-        "podré",
-        "podrás",
-        "podrá",
-        "podremos",
-        "podréis",
-        "podrán",
-      ],
+      conjugations: ["podré", "podrás", "podrá", "podremos", "podréis", "podrán"],
       examples: [
         "Yo podré terminar el trabajo antes del viernes.",
         "Tú podrás viajar cuando termines tus estudios.",
@@ -64,14 +56,7 @@ export const future: VerbSet = {
     {
       infinitive: "poner",
       english: "to put",
-      conjugations: [
-        "pondré",
-        "pondrás",
-        "pondrá",
-        "pondremos",
-        "pondréis",
-        "pondrán",
-      ],
+      conjugations: ["pondré", "pondrás", "pondrá", "pondremos", "pondréis", "pondrán"],
       examples: [
         "Yopondré más atención en mis estudios este semestre.",
         "Tú pondrás la mesa para la cena de esta noche.",
@@ -84,14 +69,7 @@ export const future: VerbSet = {
     {
       infinitive: "tener",
       english: "to have",
-      conjugations: [
-        "tendré",
-        "tendrás",
-        "tendrá",
-        "tendremos",
-        "tendréis",
-        "tendrán",
-      ],
+      conjugations: ["tendré", "tendrás", "tendrá", "tendremos", "tendréis", "tendrán"],
       examples: [
         "Yo tendré una reunión importante mañana por la mañana.",
         "Tú tendrás mucho éxito en tu nueva carrera.",
@@ -104,14 +82,7 @@ export const future: VerbSet = {
     {
       infinitive: "venir",
       english: "to come",
-      conjugations: [
-        "vendré",
-        "vendrás",
-        "vendrá",
-        "vendremos",
-        "vendréis",
-        "vendrán",
-      ],
+      conjugations: ["vendré", "vendrás", "vendrá", "vendremos", "vendréis", "vendrán"],
       examples: [
         "Yo vendré a tu casa después del trabajo.",
         "Tú vendrás conmigo al concierto el sábado, ¿verdad?",
@@ -124,14 +95,7 @@ export const future: VerbSet = {
     {
       infinitive: "salir",
       english: "to leave/go out",
-      conjugations: [
-        "saldré",
-        "saldrás",
-        "saldrá",
-        "saldremos",
-        "saldréis",
-        "saldrán",
-      ],
+      conjugations: ["saldré", "saldrás", "saldrá", "saldremos", "saldréis", "saldrán"],
       examples: [
         "Yo saldré de viaje la próxima semana.",
         "Tú saldrás con tus amigos este fin de semana.",
@@ -144,14 +108,7 @@ export const future: VerbSet = {
     {
       infinitive: "saber",
       english: "to know",
-      conjugations: [
-        "sabré",
-        "sabrás",
-        "sabrá",
-        "sabremos",
-        "sabréis",
-        "sabrán",
-      ],
+      conjugations: ["sabré", "sabrás", "sabrá", "sabremos", "sabréis", "sabrán"],
       examples: [
         "Yo sabré los resultados del examen mañana.",
         "Tú sabrás hablar español perfectamente en un año.",

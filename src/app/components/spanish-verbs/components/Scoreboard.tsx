@@ -9,9 +9,7 @@ import { ImprovementGraph } from "./ImprovementGraph";
 import { PageCard } from "./PageCard";
 
 export function Scoreboard() {
-  const [selectedTense, setSelectedTense] = useState<string>(
-    Object.keys(verbSets)[0],
-  );
+  const [selectedTense, setSelectedTense] = useState<string>(Object.keys(verbSets)[0]);
   const [stats, setStats] = useState<TenseStats | null>(null);
 
   useEffect(() => {
@@ -49,12 +47,8 @@ export function Scoreboard() {
       {/* Stats Summary */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-lg p-4 shadow-sm">
-          <div className="text-sm text-emerald-700 font-medium">
-            Total Sessions
-          </div>
-          <div className="text-3xl font-bold text-emerald-800">
-            {stats.totalSessions}
-          </div>
+          <div className="text-sm text-emerald-700 font-medium">Total Sessions</div>
+          <div className="text-3xl font-bold text-emerald-800">{stats.totalSessions}</div>
         </div>
         <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-lg p-4 shadow-sm">
           <div className="text-sm text-emerald-700 font-medium">Best Score</div>
@@ -65,9 +59,7 @@ export function Scoreboard() {
           </div>
         </div>
         <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-lg p-4 shadow-sm">
-          <div className="text-sm text-emerald-700 font-medium">
-            Average Rounds
-          </div>
+          <div className="text-sm text-emerald-700 font-medium">Average Rounds</div>
           <div className="text-3xl font-bold text-emerald-800">
             {stats.totalSessions > 0 ? stats.averageRounds.toFixed(1) : "—"}
           </div>
@@ -77,31 +69,24 @@ export function Scoreboard() {
       {/* Best Score Details */}
       {stats.bestScore && (
         <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-lg p-4 shadow-sm">
-          <h3 className="text-lg font-semibold text-emerald-800 mb-2">
-            🏆 Best Performance
-          </h3>
+          <h3 className="text-lg font-semibold text-emerald-800 mb-2">🏆 Best Performance</h3>
           <div className="text-sm text-emerald-700">
             <div>
-              Completed in{" "}
-              <span className="font-bold">{stats.bestScore.rounds}</span> round
+              Completed in <span className="font-bold">{stats.bestScore.rounds}</span> round
               {stats.bestScore.rounds > 1 ? "s" : ""}
             </div>
             <div>
-              Score:{" "}
-              <span className="font-bold">{stats.bestScore.correctCards}</span>/
+              Score: <span className="font-bold">{stats.bestScore.correctCards}</span>/
               {stats.bestScore.totalCards} correct
             </div>
             <div className="text-emerald-600 mt-1">
-              {new Date(stats.bestScore.completedAt).toLocaleDateString(
-                "en-US",
-                {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                  hour: "2-digit",
-                  minute: "2-digit",
-                },
-              )}
+              {new Date(stats.bestScore.completedAt).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+              })}
             </div>
           </div>
         </div>
@@ -125,13 +110,8 @@ export function Scoreboard() {
               </thead>
               <tbody>
                 {stats.allScores.map((score, index) => (
-                  <tr
-                    key={score.id}
-                    className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
-                  >
-                    <td className="p-2">
-                      {new Date(score.completedAt).toLocaleDateString()}
-                    </td>
+                  <tr key={score.id} className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                    <td className="p-2">{new Date(score.completedAt).toLocaleDateString()}</td>
                     <td className="p-2 font-semibold">
                       {score.rounds} round{score.rounds > 1 ? "s" : ""}
                     </td>

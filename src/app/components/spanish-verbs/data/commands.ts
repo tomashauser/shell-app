@@ -11,8 +11,7 @@ export const commands: VerbSet = {
       "Nosotros (let's): Use present subjunctive",
       "Many common verbs have irregular affirmative tú forms",
     ],
-    regularPattern:
-      "hablar → habla (tú affirmative), no hables (tú negative), hablemos (nosotros)",
+    regularPattern: "hablar → habla (tú affirmative), no hables (tú negative), hablemos (nosotros)",
   },
   verbs: [
     {
@@ -174,14 +173,7 @@ export const commands: VerbSet = {
     {
       infinitive: "encontrar",
       english: "to find/meet",
-      conjugations: [
-        "encuentra",
-        "(no encuentres)",
-        "—",
-        "encontremos",
-        "—",
-        "—",
-      ],
+      conjugations: ["encuentra", "(no encuentres)", "—", "encontremos", "—", "—"],
       examples: [
         "Encuentra una solución creativa al problema.",
         "No encuentres excusas para no trabajar.",

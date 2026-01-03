@@ -108,14 +108,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "tener",
       english: "to have",
-      conjugations: [
-        "tenga",
-        "tengas",
-        "tenga",
-        "tengamos",
-        "tengáis",
-        "tengan",
-      ],
+      conjugations: ["tenga", "tengas", "tenga", "tengamos", "tengáis", "tengan"],
       examples: [
         "Espero que yo tenga tiempo para estudiar.",
         "Quiero que tú tengas éxito en tu nuevo trabajo.",
@@ -128,14 +121,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "venir",
       english: "to come",
-      conjugations: [
-        "venga",
-        "vengas",
-        "venga",
-        "vengamos",
-        "vengáis",
-        "vengan",
-      ],
+      conjugations: ["venga", "vengas", "venga", "vengamos", "vengáis", "vengan"],
       examples: [
         "Dudo que yo venga a la reunión tarde.",
         "Espero que tú vengas a mi fiesta de cumpleaños.",
@@ -161,14 +147,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "poner",
       english: "to put",
-      conjugations: [
-        "ponga",
-        "pongas",
-        "ponga",
-        "pongamos",
-        "pongáis",
-        "pongan",
-      ],
+      conjugations: ["ponga", "pongas", "ponga", "pongamos", "pongáis", "pongan"],
       examples: [
         "Quiero que yo ponga más atención en clase.",
         "Es necesario que tú pongas la mesa para la cena.",
@@ -194,14 +173,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "traer",
       english: "to bring",
-      conjugations: [
-        "traiga",
-        "traigas",
-        "traiga",
-        "traigamos",
-        "traigáis",
-        "traigan",
-      ],
+      conjugations: ["traiga", "traigas", "traiga", "traigamos", "traigáis", "traigan"],
       examples: [
         "Espero que yo traiga suficiente comida para todos.",
         "Quiero que tú traigas tu guitarra a la fiesta.",
@@ -214,14 +186,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "salir",
       english: "to leave/go out",
-      conjugations: [
-        "salga",
-        "salgas",
-        "salga",
-        "salgamos",
-        "salgáis",
-        "salgan",
-      ],
+      conjugations: ["salga", "salgas", "salga", "salgamos", "salgáis", "salgan"],
       examples: [
         "No creo que yo salga esta noche porque estoy cansado.",
         "Dudo que tú salgas con ese tiempo tan malo.",
@@ -234,14 +199,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "conocer",
       english: "to know (person/place)",
-      conjugations: [
-        "conozca",
-        "conozcas",
-        "conozca",
-        "conozcamos",
-        "conozcáis",
-        "conozcan",
-      ],
+      conjugations: ["conozca", "conozcas", "conozca", "conozcamos", "conozcáis", "conozcan"],
       examples: [
         "Espero que yo conozca a gente interesante en la universidad.",
         "Quiero que tú conozcas a mi familia este fin de semana.",
@@ -254,14 +212,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "caber",
       english: "to fit",
-      conjugations: [
-        "quepa",
-        "quepas",
-        "quepa",
-        "quepamos",
-        "quepáis",
-        "quepan",
-      ],
+      conjugations: ["quepa", "quepas", "quepa", "quepamos", "quepáis", "quepan"],
       examples: [
         "Dudo que yo quepa en ese vestido pequeño.",
         "No creo que tú quepas en el coche con nosotros.",
@@ -274,14 +225,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "actuar",
       english: "to act",
-      conjugations: [
-        "actúe",
-        "actúes",
-        "actúe",
-        "actuemos",
-        "actuéis",
-        "actúen",
-      ],
+      conjugations: ["actúe", "actúes", "actúe", "actuemos", "actuéis", "actúen"],
       examples: [
         "Es importante que yo actúe con prudencia.",
         "Quiero que tú actúes de manera profesional.",
@@ -294,14 +238,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "adecuar",
       english: "to adapt/adjust",
-      conjugations: [
-        "adecúe",
-        "adecúes",
-        "adecúe",
-        "adecuemos",
-        "adecuéis",
-        "adecúen",
-      ],
+      conjugations: ["adecúe", "adecúes", "adecúe", "adecuemos", "adecuéis", "adecúen"],
       examples: [
         "Es importante que yo adecúe mi horario al trabajo.",
         "Quiero que tú adecúes el discurso al público.",
@@ -314,14 +251,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "adquirir",
       english: "to acquire",
-      conjugations: [
-        "adquiera",
-        "adquieras",
-        "adquiera",
-        "adquiramos",
-        "adquiráis",
-        "adquieran",
-      ],
+      conjugations: ["adquiera", "adquieras", "adquiera", "adquiramos", "adquiráis", "adquieran"],
       examples: [
         "Espero que yo adquiera nuevas habilidades en el curso.",
         "Quiero que tú adquieras experiencia trabajando aquí.",
@@ -334,14 +264,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "aislar",
       english: "to isolate",
-      conjugations: [
-        "aísle",
-        "aísles",
-        "aísle",
-        "aislemos",
-        "aisléis",
-        "aíslen",
-      ],
+      conjugations: ["aísle", "aísles", "aísle", "aislemos", "aisléis", "aíslen"],
       examples: [
         "Es necesario que yo aísle el problema principal.",
         "Quiero que tú aísles el cable eléctrico.",
@@ -354,14 +277,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "argüir",
       english: "to argue/contend",
-      conjugations: [
-        "arguya",
-        "arguyas",
-        "arguya",
-        "arguyamos",
-        "arguyáis",
-        "arguyan",
-      ],
+      conjugations: ["arguya", "arguyas", "arguya", "arguyamos", "arguyáis", "arguyan"],
       examples: [
         "No creo que yo arguya sin fundamentos.",
         "Dudo que tú arguyas de manera convincente.",
@@ -400,14 +316,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "averiguar",
       english: "to find out/ascertain",
-      conjugations: [
-        "averigüe",
-        "averigües",
-        "averigüe",
-        "averigüemos",
-        "averigüéis",
-        "averigüen",
-      ],
+      conjugations: ["averigüe", "averigües", "averigüe", "averigüemos", "averigüéis", "averigüen"],
       examples: [
         "Es importante que yo averigüe la verdad.",
         "Quiero que tú averigües qué pasó anoche.",
@@ -420,14 +329,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "bendecir",
       english: "to bless",
-      conjugations: [
-        "bendiga",
-        "bendigas",
-        "bendiga",
-        "bendigamos",
-        "bendigáis",
-        "bendigan",
-      ],
+      conjugations: ["bendiga", "bendigas", "bendiga", "bendigamos", "bendigáis", "bendigan"],
       examples: [
         "Espero que yo bendiga la mesa antes de comer.",
         "Quiero que tú bendigas esta unión.",
@@ -440,14 +342,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "buscar",
       english: "to look for/search",
-      conjugations: [
-        "busque",
-        "busques",
-        "busque",
-        "busquemos",
-        "busquéis",
-        "busquen",
-      ],
+      conjugations: ["busque", "busques", "busque", "busquemos", "busquéis", "busquen"],
       examples: [
         "Espero que yo busque en todos los cajones.",
         "Quiero que tú busques una solución al problema.",
@@ -493,14 +388,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "corroer",
       english: "to corrode",
-      conjugations: [
-        "corroa",
-        "corroas",
-        "corroa",
-        "corroamos",
-        "corroáis",
-        "corroan",
-      ],
+      conjugations: ["corroa", "corroas", "corroa", "corroamos", "corroáis", "corroan"],
       examples: [
         "Es posible que yo corroa el material sin querer.",
         "Dudo que tú corroas la superficie con eso.",
@@ -513,14 +401,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "delinquir",
       english: "to commit a crime",
-      conjugations: [
-        "delinca",
-        "delincas",
-        "delinca",
-        "delincamos",
-        "delincáis",
-        "delincan",
-      ],
+      conjugations: ["delinca", "delincas", "delinca", "delincamos", "delincáis", "delincan"],
       examples: [
         "No creo que yo delinca bajo ninguna circunstancia.",
         "Dudo que tú delincas en el futuro.",
@@ -553,14 +434,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "elegir",
       english: "to choose/elect",
-      conjugations: [
-        "elija",
-        "elijas",
-        "elija",
-        "elijamos",
-        "elijáis",
-        "elijan",
-      ],
+      conjugations: ["elija", "elijas", "elija", "elijamos", "elijáis", "elijan"],
       examples: [
         "Espero que yo elija la opción correcta.",
         "Quiero que tú elijas el menú para la cena.",
@@ -593,14 +467,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "engullir",
       english: "to gulp down/devour",
-      conjugations: [
-        "engulla",
-        "engullas",
-        "engulla",
-        "engullamos",
-        "engulláis",
-        "engullan",
-      ],
+      conjugations: ["engulla", "engullas", "engulla", "engullamos", "engulláis", "engullan"],
       examples: [
         "No es bueno que yo engulla la comida tan rápido.",
         "Dudo que tú engullas sin masticar.",
@@ -613,14 +480,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "entender",
       english: "to understand",
-      conjugations: [
-        "entienda",
-        "entiendas",
-        "entienda",
-        "entendamos",
-        "entendáis",
-        "entiendan",
-      ],
+      conjugations: ["entienda", "entiendas", "entienda", "entendamos", "entendáis", "entiendan"],
       examples: [
         "Espero que yo entienda la lección de hoy.",
         "Quiero que tú entiendas mi punto de vista.",
@@ -633,14 +493,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "enviar",
       english: "to send",
-      conjugations: [
-        "envíe",
-        "envíes",
-        "envíe",
-        "enviemos",
-        "enviéis",
-        "envíen",
-      ],
+      conjugations: ["envíe", "envíes", "envíe", "enviemos", "enviéis", "envíen"],
       examples: [
         "Es importante que yo envíe el correo hoy.",
         "Quiero que tú envíes las invitaciones pronto.",
@@ -679,14 +532,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "gruñir",
       english: "to growl/grumble",
-      conjugations: [
-        "gruña",
-        "gruñas",
-        "gruña",
-        "gruñamos",
-        "gruñáis",
-        "gruñan",
-      ],
+      conjugations: ["gruña", "gruñas", "gruña", "gruñamos", "gruñáis", "gruñan"],
       examples: [
         "No quiero que yo gruña cuando me despierten.",
         "Dudo que tú gruñas sin motivo.",
@@ -699,14 +545,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "jugar",
       english: "to play",
-      conjugations: [
-        "juegue",
-        "juegues",
-        "juegue",
-        "juguemos",
-        "juguéis",
-        "jueguen",
-      ],
+      conjugations: ["juegue", "juegues", "juegue", "juguemos", "juguéis", "jueguen"],
       examples: [
         "Espero que yo juegue bien en el partido.",
         "Quiero que tú juegues al fútbol con nosotros.",
@@ -719,14 +558,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "lucir",
       english: "to shine/show off",
-      conjugations: [
-        "luzca",
-        "luzcas",
-        "luzca",
-        "luzcamos",
-        "luzcáis",
-        "luzcan",
-      ],
+      conjugations: ["luzca", "luzcas", "luzca", "luzcamos", "luzcáis", "luzcan"],
       examples: [
         "Espero que yo luzca bien en la foto.",
         "Quiero que tú luzcas tu nuevo vestido.",
@@ -765,14 +597,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "parecer",
       english: "to seem/appear",
-      conjugations: [
-        "parezca",
-        "parezcas",
-        "parezca",
-        "parezcamos",
-        "parezcáis",
-        "parezcan",
-      ],
+      conjugations: ["parezca", "parezcas", "parezca", "parezcamos", "parezcáis", "parezcan"],
       examples: [
         "No creo que yo parezca tan joven.",
         "Dudo que tú parezcas cansado.",
@@ -785,14 +610,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "pensar",
       english: "to think",
-      conjugations: [
-        "piense",
-        "pienses",
-        "piense",
-        "pensemos",
-        "penséis",
-        "piensen",
-      ],
+      conjugations: ["piense", "pienses", "piense", "pensemos", "penséis", "piensen"],
       examples: [
         "Espero que yo piense bien antes de decidir.",
         "Quiero que tú pienses en las consecuencias.",
@@ -805,14 +623,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "predecir",
       english: "to predict",
-      conjugations: [
-        "prediga",
-        "predigas",
-        "prediga",
-        "predigamos",
-        "predigáis",
-        "predigan",
-      ],
+      conjugations: ["prediga", "predigas", "prediga", "predigamos", "predigáis", "predigan"],
       examples: [
         "Dudo que yo prediga el futuro correctamente.",
         "No creo que tú predigas lo que va a pasar.",
@@ -825,14 +636,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "prohibir",
       english: "to prohibit/forbid",
-      conjugations: [
-        "prohíba",
-        "prohíbas",
-        "prohíba",
-        "prohibamos",
-        "prohibáis",
-        "prohíban",
-      ],
+      conjugations: ["prohíba", "prohíbas", "prohíba", "prohibamos", "prohibáis", "prohíban"],
       examples: [
         "No creo que yo prohíba el uso del teléfono.",
         "Dudo que tú prohíbas eso sin razón.",
@@ -845,14 +649,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "raer",
       english: "to scrape/scratch off",
-      conjugations: [
-        "raiga",
-        "raigas",
-        "raiga",
-        "raigamos",
-        "raigáis",
-        "raigan",
-      ],
+      conjugations: ["raiga", "raigas", "raiga", "raigamos", "raigáis", "raigan"],
       examples: [
         "Es necesario que yo raiga la pintura vieja.",
         "Quiero que tú raigas toda la superficie.",
@@ -865,14 +662,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "rehusar",
       english: "to refuse",
-      conjugations: [
-        "rehúse",
-        "rehúses",
-        "rehúse",
-        "rehusemos",
-        "rehuséis",
-        "rehúsen",
-      ],
+      conjugations: ["rehúse", "rehúses", "rehúse", "rehusemos", "rehuséis", "rehúsen"],
       examples: [
         "Es posible que yo rehúse la oferta.",
         "Dudo que tú rehúses ayudar a un amigo.",
@@ -885,14 +675,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "reunir",
       english: "to gather/meet",
-      conjugations: [
-        "reúna",
-        "reúnas",
-        "reúna",
-        "reunamos",
-        "reunáis",
-        "reúnan",
-      ],
+      conjugations: ["reúna", "reúnas", "reúna", "reunamos", "reunáis", "reúnan"],
       examples: [
         "Es importante que yo reúna toda la información.",
         "Quiero que tú reúnas al equipo para la junta.",
@@ -931,14 +714,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "sentir",
       english: "to feel/regret",
-      conjugations: [
-        "sienta",
-        "sientas",
-        "sienta",
-        "sintamos",
-        "sintáis",
-        "sientan",
-      ],
+      conjugations: ["sienta", "sientas", "sienta", "sintamos", "sintáis", "sientan"],
       examples: [
         "Espero que yo no sienta dolor después de la cirugía.",
         "Quiero que tú sientas orgullo por tu trabajo.",
@@ -951,14 +727,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "sonreír",
       english: "to smile",
-      conjugations: [
-        "sonría",
-        "sonrías",
-        "sonría",
-        "sonriamos",
-        "sonriáis",
-        "sonrían",
-      ],
+      conjugations: ["sonría", "sonrías", "sonría", "sonriamos", "sonriáis", "sonrían"],
       examples: [
         "Espero que yo sonría en la foto.",
         "Quiero que tú sonrías más a menudo.",
@@ -984,14 +753,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "volver",
       english: "to return/come back",
-      conjugations: [
-        "vuelva",
-        "vuelvas",
-        "vuelva",
-        "volvamos",
-        "volváis",
-        "vuelvan",
-      ],
+      conjugations: ["vuelva", "vuelvas", "vuelva", "volvamos", "volváis", "vuelvan"],
       examples: [
         "Espero que yo vuelva a casa pronto.",
         "Quiero que tú vuelvas antes de medianoche.",
@@ -1004,14 +766,7 @@ export const presentSubjunctive: VerbSet = {
     {
       infinitive: "yacer",
       english: "to lie (down)",
-      conjugations: [
-        "yazca",
-        "yazcas",
-        "yazca",
-        "yazcamos",
-        "yazcáis",
-        "yazcan",
-      ],
+      conjugations: ["yazca", "yazcas", "yazca", "yazcamos", "yazcáis", "yazcan"],
       examples: [
         "Es raro que yo yazca en el suelo.",
         "Dudo que tú yazcas ahí cómodamente.",

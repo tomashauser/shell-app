@@ -28,9 +28,7 @@ export default function RootLayout({
     <NuqsAdapter>
       <VersionPrintProvider>
         <html lang="en">
-          <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-          >
+          <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
             {children}
           </body>
         </html>
