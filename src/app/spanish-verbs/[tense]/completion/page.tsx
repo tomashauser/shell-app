@@ -1,21 +1,27 @@
-"use client";
-
-import { useParams, useRouter, useSearchParams } from "next/navigation";
+import { notFound } from "next/navigation";
 import { CompletionScreen } from "@/app/components/spanish-verbs/components/CompletionScreen";
 import { verbSets } from "@/app/components/spanish-verbs/data";
-import { slugToTense } from "@/app/components/spanish-verbs/utils";
+import { slugToTense, tenseToSlug } from "@/app/components/spanish-verbs/utils";
 
-export default function CompletionPage() {
-  const router = useRouter();
-  const params = useParams();
-  const searchParams = useSearchParams();
-  const slug = params.tense as string;
+export function generateStaticParams() {
+  return Object.keys(verbSets).map((tense) => ({
+    tense: tenseToSlug(tense),
+  }));
+}
+
+type Props = {
+  params: Promise<{ tense: string }>;
+  searchParams: Promise<{ rounds?: string }>;
+};
+
+export default async function CompletionPage({ params, searchParams }: Props) {
+  const { tense: slug } = await params;
+  const { rounds: roundsParam } = await searchParams;
   const tense = slugToTense(slug);
-  const rounds = parseInt(searchParams.get("rounds") ?? "1", 10);
+  const rounds = parseInt(roundsParam ?? "1", 10);
 
-  if (!tense || !verbSets[tense]) {
-    router.push("/spanish-verbs");
-    return null;
+  if (!verbSets[tense]) {
+    notFound();
   }
 
   return <CompletionScreen round={rounds} slug={slug} />;
