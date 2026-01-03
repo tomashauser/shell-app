@@ -129,7 +129,7 @@ export function GrammarExplanation({ tenseData, tenseKey }: GrammarExplanationPr
                 type="checkbox"
                 checked={selectedVerbs.has(verb.infinitive)}
                 onChange={() => toggleVerb(verb.infinitive)}
-                className="w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500 cursor-pointer"
+                className="w-4 h-4 min-w-4 min-h-4 flex-shrink-0 accent-emerald-600 rounded cursor-pointer"
               />
               <span className="text-sm text-gray-700">
                 {verb.infinitive}
