@@ -1,10 +1,11 @@
 "use client";
 
-import { notFound, useParams, useRouter } from "next/navigation";
+import { notFound, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FlashCard } from "@/app/components/spanish-verbs/components/FlashCard";
 import { FlashCardControls } from "@/app/components/spanish-verbs/components/FlashCardControls";
 import { FlashCardHeader } from "@/app/components/spanish-verbs/components/FlashCardHeader";
+import { LoadingScreen } from "@/app/components/spanish-verbs/components/LoadingScreen";
 import {
   commandPronouns,
   pronouns,
@@ -28,11 +29,23 @@ type PreviousCard = {
   wasFlipped: boolean;
 } | null;
 
-export default function PracticePage() {
+type Props = {
+  params: Promise<{ tense: string }>;
+};
+
+export default function PracticePage({ params }: Props) {
   const router = useRouter();
-  const params = useParams();
-  const slug = params.tense as string;
-  const tense = slugToTense(slug);
+  const [slug, setSlug] = useState<string>("");
+  const [tense, setTense] = useState<string>("");
+
+  useEffect(() => {
+    void params.then((resolvedParams) => {
+      const resolvedSlug = resolvedParams.tense;
+      const resolvedTense = slugToTense(resolvedSlug);
+      setSlug(resolvedSlug);
+      setTense(resolvedTense);
+    });
+  }, [params]);
 
   const [currentDeck, setCurrentDeck] = useState<Verb[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -44,7 +57,9 @@ export default function PracticePage() {
   const [previousCard, setPreviousCard] = useState<PreviousCard>(null);
 
   useEffect(() => {
-    if (!tense || !verbSets[tense]) {
+    if (!tense) return; // Wait for tense to be resolved
+
+    if (!verbSets[tense]) {
       notFound();
     }
 
@@ -71,17 +86,9 @@ export default function PracticePage() {
   const currentCard = currentDeck[currentIndex];
   const currentPronouns = tense === "commands" ? commandPronouns : pronouns;
 
-  const handleFlip = () => {
-    setIsFlipped(!isFlipped);
-  };
-
-  const handleKnew = () => {
-    moveToNext(false);
-  };
-
-  const handleDidntKnow = () => {
-    moveToNext(true);
-  };
+  const handleFlip = () => setIsFlipped(!isFlipped);
+  const handleKnew = () => moveToNext(false);
+  const handleDidntKnow = () => moveToNext(true);
 
   const moveToNext = (wasIncorrect: boolean) => {
     const newIncorrectCards =
@@ -147,17 +154,8 @@ export default function PracticePage() {
     setPreviousCard(null);
   };
 
-  if (!tense || !verbSets[tense] || !currentCard) {
-    return (
-      <div className="relative flex items-center justify-center min-h-screen p-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-emerald-100/50 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-teal-100/50 via-transparent to-transparent" />
-        <div className="text-center relative z-10">
-          <div className="text-gray-600">Loading...</div>
-        </div>
-      </div>
-    );
+  if (!tense || !currentCard) {
+    return <LoadingScreen />;
   }
 
   return (
