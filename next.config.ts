@@ -4,6 +4,7 @@ import packageJson from "./package.json";
 const nextConfig: NextConfig = {
   output: "standalone",
   typedRoutes: true,
+  reactCompiler: true,
   env: {
     NEXT_PUBLIC_VERSION: packageJson.version,
   },
