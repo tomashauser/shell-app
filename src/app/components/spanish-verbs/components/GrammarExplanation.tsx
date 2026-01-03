@@ -1,6 +1,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import type { VerbSet } from "../data";
 import { getTenseSelectedVerbs, saveSelectedVerbs } from "../storage";
 import { tenseToSlug } from "../utils";
@@ -59,7 +60,12 @@ export function GrammarExplanation({ tenseData, tenseKey }: GrammarExplanationPr
           <Button
             onClick={handleStart}
             disabled={selectedVerbs.size === 0}
-            className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white shadow-md hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            className={cn(
+              "w-full bg-gradient-to-r from-emerald-500 to-teal-500",
+              "hover:from-emerald-600 hover:to-teal-600",
+              "text-white shadow-md hover:shadow-lg transition-all",
+              "disabled:opacity-50 disabled:cursor-not-allowed"
+            )}
             size="lg"
           >
             Start Practice ({selectedVerbs.size} {selectedVerbs.size === 1 ? "verb" : "verbs"})
