@@ -1,6 +1,6 @@
 "use client";
 
-import { useParams, useRouter } from "next/navigation";
+import { notFound, useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FlashCard } from "@/app/components/spanish-verbs/components/FlashCard";
 import { FlashCardControls } from "@/app/components/spanish-verbs/components/FlashCardControls";
@@ -45,8 +45,7 @@ export default function PracticePage() {
 
   useEffect(() => {
     if (!tense || !verbSets[tense]) {
-      router.push("/spanish-verbs");
-      return;
+      notFound();
     }
 
     // Get selected verbs from localStorage, or use all if none selected
@@ -67,7 +66,7 @@ export default function PracticePage() {
     setTotalCards(verbs.length);
     setIncorrectCount(0);
     setPreviousCard(null);
-  }, [tense, router]);
+  }, [tense]);
 
   const currentCard = currentDeck[currentIndex];
   const currentPronouns = tense === "commands" ? commandPronouns : pronouns;
