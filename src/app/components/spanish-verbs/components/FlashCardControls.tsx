@@ -26,7 +26,7 @@ export function FlashCardControls({
             size="lg"
             className="flex-1 bg-rose-500 hover:bg-rose-600 shadow-md hover:shadow-lg"
           >
-            <span className="text-xl mr-1">✗</span> Didn't Know
+            <span className="text-xl mr-1">✗</span> Didn&#39;t Know
           </Button>
           <Button
             onClick={onKnew}
@@ -42,12 +42,7 @@ export function FlashCardControls({
         </div>
       )}
       {canGoBack && (
-        <Button
-          onClick={onBack}
-          variant="outline"
-          size="sm"
-          className="shadow-md hover:shadow-lg"
-        >
+        <Button onClick={onBack} variant="outline" size="sm" className="shadow-md hover:shadow-lg">
           <ArrowLeft className="h-4 w-4 mr-1" /> Back to Previous Card
         </Button>
       )}

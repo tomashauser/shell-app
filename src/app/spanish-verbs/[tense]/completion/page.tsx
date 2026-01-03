@@ -11,7 +11,7 @@ export default function CompletionPage() {
   const searchParams = useSearchParams();
   const slug = params.tense as string;
   const tense = slugToTense(slug);
-  const rounds = parseInt(searchParams.get("rounds") || "1", 10);
+  const rounds = parseInt(searchParams.get("rounds") ?? "1", 10);
 
   if (!tense || !verbSets[tense]) {
     router.push("/spanish-verbs");

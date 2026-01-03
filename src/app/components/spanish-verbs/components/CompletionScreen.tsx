@@ -21,7 +21,7 @@ export function CompletionScreen({ round, slug }: CompletionScreenProps) {
       }
     >
       <p className="text-muted-foreground mb-6">
-        You've mastered all the verbs in {round} round{round > 1 ? "s" : ""}!
+        You&#39;ve mastered all the verbs in {round} round{round > 1 ? "s" : ""}!
       </p>
       <div className="flex gap-3 justify-center">
         <Button asChild variant="secondary">

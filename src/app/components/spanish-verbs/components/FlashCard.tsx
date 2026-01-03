@@ -1,5 +1,24 @@
-import { useMemo } from "react";
 import type { Verb } from "../data";
+
+const getExampleData = (verb: Verb) => {
+  if (!verb.examples || verb.examples.length === 0) return null;
+
+  // Find valid indices (where both conjugation and example exist)
+  const validIndices: number[] = [];
+  for (let i = 0; i < verb.conjugations.length; i++) {
+    if (verb.conjugations[i] !== "—" && verb.examples[i] && verb.examples[i] !== "—") {
+      validIndices.push(i);
+    }
+  }
+
+  if (validIndices.length === 0) return null;
+
+  const randomIdx = validIndices[Math.floor(Math.random() * validIndices.length)];
+  return {
+    example: verb.examples[randomIdx],
+    conjugation: verb.conjugations[randomIdx],
+  };
+};
 
 type FlashCardProps = {
   verb: Verb;
@@ -8,36 +27,8 @@ type FlashCardProps = {
   onFlip: () => void;
 };
 
-export function FlashCard({
-  verb,
-  isFlipped,
-  pronouns,
-  onFlip,
-}: FlashCardProps) {
-  const exampleData = useMemo(() => {
-    if (!verb.examples || verb.examples.length === 0) return null;
-
-    // Find valid indices (where both conjugation and example exist)
-    const validIndices: number[] = [];
-    for (let i = 0; i < verb.conjugations.length; i++) {
-      if (
-        verb.conjugations[i] !== "—" &&
-        verb.examples[i] &&
-        verb.examples[i] !== "—"
-      ) {
-        validIndices.push(i);
-      }
-    }
-
-    if (validIndices.length === 0) return null;
-
-    const randomIdx =
-      validIndices[Math.floor(Math.random() * validIndices.length)];
-    return {
-      example: verb.examples[randomIdx],
-      conjugation: verb.conjugations[randomIdx],
-    };
-  }, [verb]);
+export function FlashCard({ verb, isFlipped, pronouns, onFlip }: FlashCardProps) {
+  const exampleData = getExampleData(verb);
 
   const renderExample = () => {
     if (!exampleData) return null;
@@ -81,9 +72,7 @@ export function FlashCard({
               {verb.infinitive}
             </div>
             <div className="text-xl text-gray-600 mb-4">{verb.english}</div>
-            <div className="text-gray-500 text-sm">
-              Click to reveal conjugations
-            </div>
+            <div className="text-gray-500 text-sm">Click to reveal conjugations</div>
           </div>
         </div>
 
@@ -98,9 +87,7 @@ export function FlashCard({
           }}
         >
           <div className="text-center mb-3">
-            <div className="text-2xl md:text-3xl font-bold">
-              {verb.infinitive}
-            </div>
+            <div className="text-2xl md:text-3xl font-bold">{verb.infinitive}</div>
             <div className="text-emerald-100 text-sm">{verb.english}</div>
           </div>
           <div className="space-y-1.5 md:space-y-2 mb-4">
@@ -115,9 +102,7 @@ export function FlashCard({
                   <span className="text-emerald-50 font-medium text-sm md:text-base">
                     {pronoun}
                   </span>
-                  <span className="font-bold text-sm md:text-base">
-                    {verb.conjugations[idx]}
-                  </span>
+                  <span className="font-bold text-sm md:text-base">{verb.conjugations[idx]}</span>
                 </div>
               );
             })}
@@ -129,9 +114,7 @@ export function FlashCard({
               <div className="text-emerald-100 text-xs uppercase tracking-wider mb-1 font-semibold">
                 Example
               </div>
-              <div className="text-white text-sm md:text-base italic">
-                {renderExample()}
-              </div>
+              <div className="text-white text-sm md:text-base italic">{renderExample()}</div>
             </div>
           )}
         </div>
